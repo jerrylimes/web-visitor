@@ -27,22 +27,22 @@ def serve_page(page_name):
         with open(page_path, "r") as file:
             file = open(page_path, encoding="utf8")
             content = file.read()
-        return render_template("dynamic_page.html", content=content)
+        return render_template("layout.html", content=content)
     else:
         abort(404)  # Return a 404 error if the page doesn't exist
 
 
-@app.route("/pages/subpages/<subpage_name>.html")
-def serve_subpage(subpage_name):
-    subpage_path = os.path.join("pages", "subpages", f"{subpage_name}.html")
-    if os.path.exists(subpage_path):
-        # Read the page content here and pass it to the template
-        with open(subpage_path, "r") as file:
-            file = open(subpage_path, encoding="utf8")
-            content = file.read()
-        return render_template("dynamic_subpage.html", content=content)
-    else:
-        abort(404)  # Return a 404 error if the subpage doesn't exist
+# @app.route("/pages/subpages/<subpage_name>.html")
+# def serve_subpage(subpage_name):
+#     subpage_path = os.path.join("pages", "subpages", f"{subpage_name}.html")
+#     if os.path.exists(subpage_path):
+#         # Read the page content here and pass it to the template
+#         with open(subpage_path, "r") as file:
+#             file = open(subpage_path, encoding="utf8")
+#             content = file.read()
+#         return render_template("dynamic_subpage.html", content=content)
+#     else:
+#         abort(404)  # Return a 404 error if the subpage doesn't exist
 
 
 freezer = Freezer(app)
@@ -60,14 +60,14 @@ def serve_page():
             yield {"page_name": file_name[:-5]}
 
 
-@freezer.register_generator
-def serve_subpage():
-    # List all files in the 'pages/subpages' directory
-    subpages_dir = os.path.join("pages", "subpages")
-    for file_name in os.listdir(subpages_dir):
-        if file_name.endswith(".html"):
-            # Pass the subpage name without '.html'
-            yield {"subpage_name": file_name[:-5]}
+# @freezer.register_generator
+# def serve_subpage():
+#     # List all files in the 'pages/subpages' directory
+#     subpages_dir = os.path.join("pages", "subpages")
+#     for file_name in os.listdir(subpages_dir):
+#         if file_name.endswith(".html"):
+#             # Pass the subpage name without '.html'
+#             yield {"subpage_name": file_name[:-5]}
 
 
 if __name__ == "__main__":
