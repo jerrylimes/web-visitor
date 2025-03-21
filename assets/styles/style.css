@@ -35,45 +35,83 @@
 
 #logo-wrapper-link {
     width: fit-content;
-    display: inline-block;
-    margin-left: calc(10% - 17px);
+    position: fixed;
+    left: 5%;
+    top: 20px;
+    z-index: 1;
 }
 
 #logo-wrapper {
     width: fit-content;
-    margin-left: 12px;
-    margin-top: 12px;
     padding: 5px;
     border-radius: 5px;
+    transition: all 0.2s;
 }
 
 #logo-wrapper:hover {
-    background-color: #e8e8e8;
+    background-color: #e8e8e83e;
 }
 
 #logo {
     height: 30px;
     aspect-ratio: 223/100;
-    background-image: url(../images/home-button-light.svg);
+    background-image: url(../images/home-button-9FC131.svg);
 }
 
 #content-unit {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 80px;
 }
 
 #index-heading {
     font-family: 'Helvetica Neue';
-    font-weight: 100;
-    font-size: 30px;
-}
-
-#index-heading b {
     font-weight: 700;
+    font-size: 30px;
+    color: #9FC131;
 }
 
 #text-n {
-    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
     text-align: justify;
+}
+
+#index-name-card {
+    width: 50%;
+    border: solid 1px #eee;
+    border-radius: 5px;
+    padding: 6px;
+    margin-left: 25%;
+}
+
+#index-name-card #text-n {
+    margin: 6px;
+}
+
+#index-light {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#index-tag{
+    border-radius: 20px;
+    border: #9FC131 solid 1px;
+    font-family: 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: #9FC131;
+    margin-left: 5px;
+    font-size: 12px;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#index-first-light{
+    display: flex;
+    align-items: flex-end;
 }
