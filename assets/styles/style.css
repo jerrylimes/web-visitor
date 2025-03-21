@@ -48,6 +48,11 @@
     border-radius: 6px;
     margin-left: 15px;
     font-size: 16px;
+    color: white;
+}
+
+#epicerie a {
+    text-decoration: none;
 }
 
 #top-button:hover,
@@ -58,10 +63,10 @@
 #logo {
     height: 30px;
     aspect-ratio: 223/100;
-    background-image: url(../images/home-button-light.svg);
+    background-image: url(../images/home-button-dark.svg);
 }
 
-#logo-wrapper{
+#logo-wrapper {
     padding: 5px;
     border-radius: 6px;
 }
