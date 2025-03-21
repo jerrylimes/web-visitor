@@ -44,7 +44,7 @@
 #logo-wrapper {
     width: fit-content;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: all 0.2s;
 }
 
@@ -55,7 +55,7 @@
 #logo {
     height: 30px;
     aspect-ratio: 223/100;
-    background-image: url(../images/home-button-9FC131.svg);
+    background-image: url(../images/home-button-6C91D9.svg);
 }
 
 #content-unit {
@@ -64,32 +64,44 @@
     margin-top: 80px;
 }
 
-#index-heading {
-    font-family: 'Helvetica Neue';
+#inx-heading {
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700;
     font-size: 30px;
-    color: #9FC131;
+    color: #6C91D9;
 }
 
 #text-n {
-    font-family: 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 18px;
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
     text-align: justify;
 }
 
-#index-name-card {
-    width: 50%;
-    border: solid 1px #eee;
-    border-radius: 5px;
-    padding: 6px;
-    margin-left: 25%;
+#inx-first-line {
+    display: flex;
+    align-items: center;
 }
 
-#index-name-card #text-n {
-    margin: 6px;
+#inx-image {
+    border-radius: 10px;
+    aspect-ratio: 3/4;
+    background-image: url(../images/IMG_2748.webp);
+    background-size: cover;
+    margin-bottom: 15px;
 }
 
-#index-light {
+#inx-text-and-image-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 15px;
+}
+
+#inx-text-and-image-wrapper #text-n {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#inx-light {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -98,20 +110,102 @@
     z-index: -1;
 }
 
-#index-tag{
+#inx-tag {
     border-radius: 20px;
-    border: #9FC131 solid 1px;
-    font-family: 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: #6C91D9 solid 1px;
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    color: #9FC131;
+    color: #6C91D9;
     margin-left: 5px;
     font-size: 12px;
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 2px;
+}
+
+.inx-text {
+    border: solid 1px #eee;
+    border-radius: 10px;
     padding: 4px;
     padding-left: 8px;
     padding-right: 8px;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
 
-#index-first-light{
-    display: flex;
-    align-items: flex-end;
+.inx-text::-webkit-scrollbar {
+    width: 0px;
+}
+
+#inx-text-img-1 {
+    height: 100px;
+    background-image: url(../images/Snipaste_2025-03-21_15-31-17.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.inx-text-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 15px;
+}
+
+.inx-text-wrapper a,
+#inx-side-wrapper a {
+    text-decoration: none;
+    color: unset;
+}
+
+.inx-text-wrapper a>.inx-text:hover,
+#inx-side-wrapper a>.inx-text:hover {
+    border-color: #6C91D9;
+    color: #6C91D9;
+}
+
+.inx-text-wrapper a>.inx-text:hover svg,
+#inx-side-wrapper a>.inx-text:hover svg {
+    fill: #6C91D9;
+}
+
+#inx-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#inx-6 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#text-n svg {
+    height: 0.8em;
+}
+
+.inx-text #text-n b {
+    color: #6C91D9;
+}
+
+.inx-text-wrapper> :first-child,
+#inx-text-wrapper> :first-child {
+    border: none;
+}
+
+#inx-side-wrapper .inx-text {
+    border: none;
+    border-bottom: solid 1px #eee;
+    border-radius: 0;
+    margin-bottom: 0
+}
+
+#i-courses> :last-child>.inx-text {
+    border-bottom: none;
+}
+
+#i-courses {
+    margin-top: 15px;
+    border: solid 1px #eee;
+    border-radius: 15px;
 }
