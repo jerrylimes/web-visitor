@@ -35,8 +35,8 @@
 
 #logo-wrapper-link {
     width: fit-content;
-    position: fixed;
-    left: 5%;
+    position: absolute;
+    left: calc(5% + 10px);
     top: 20px;
     z-index: 1;
 }
@@ -94,6 +94,7 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     column-gap: 15px;
+    transition: all 0.2s;
 }
 
 #inx-text-and-image-wrapper #text-n {
@@ -159,6 +160,7 @@
 #inx-side-wrapper a {
     text-decoration: none;
     color: unset;
+    height: 37.5px;
 }
 
 .inx-text-wrapper a>.inx-text:hover,
@@ -200,6 +202,10 @@
     margin-bottom: 0
 }
 
+#inx-side-wrapper #inx-text-wrapper{
+    margin-bottom: 15px;
+}
+
 #i-courses> :last-child>.inx-text {
     border-bottom: none;
 }
@@ -208,4 +214,41 @@
     margin-top: 15px;
     border: solid 1px #eee;
     border-radius: 15px;
+}
+
+.inx-text-wrapper,
+#inx-6,
+#inx-4,
+.inx-text,
+.inx-text-wrapper> :last-child {
+    transition: all 0.2s;
+}
+
+@media (max-width: 430px) {
+    #inx-text-and-image-wrapper {
+        grid-template-rows: 2fr 4fr;
+        grid-template-columns: 1fr;
+    }
+
+    .inx-text-wrapper,
+    #inx-6,
+    #inx-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .inx-text-wrapper a,
+    #inx-side-wrapper a {
+        height: unset;
+    }
+
+    .inx-text {
+        border: none;
+        border-bottom: solid 1px #eee;
+        border-radius: 0;
+        margin-bottom: 0
+    }
+
+    .inx-text-wrapper> :last-child {
+        margin-bottom: 10px;
+    }
 }
