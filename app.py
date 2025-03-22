@@ -1,7 +1,7 @@
 """
     Author: Jerry Li, Generative AI
     Date: 2025-01-25
-    Version: 1.2
+    Version: 0.1
 """
 
 from flask import Flask, render_template, abort
