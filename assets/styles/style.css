@@ -105,10 +105,11 @@
 #inx-light {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
+    background-color: #EEF1F4;
 }
 
 #inx-tag {
@@ -126,7 +127,7 @@
 }
 
 .inx-text {
-    border: solid 1px #eee;
+    border: solid 1px #B0C7D9;
     border-radius: 10px;
     padding: 4px;
     padding-left: 8px;
@@ -197,7 +198,7 @@
 
 #inx-side-wrapper .inx-text {
     border: none;
-    border-bottom: solid 1px #eee;
+    border-bottom: solid 1px #B0C7D9;
     border-radius: 0;
     margin-bottom: 0
 }
@@ -212,7 +213,7 @@
 
 #i-courses {
     margin-top: 15px;
-    border: solid 1px #eee;
+    border: solid 1px #B0C7D9;
     border-radius: 15px;
 }
 
@@ -262,4 +263,25 @@
 #inx-subtitle-smaller {
     font-size: 18px;
     font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .inx-text,
+    #i-courses {
+        border-color: #55758E;
+    }
+
+    #inx-side-wrapper .inx-text {
+        border-bottom-color: #55758E;
+    }
+
+    .inx-text-wrapper .inx-text svg,
+    #inx-side-wrapper .inx-text svg {
+        fill: white;
+    }
+
+    #inx-light {
+        background-color: #012030;
+    }
 }
