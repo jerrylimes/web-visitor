@@ -42,7 +42,7 @@
 #logo-wrapper-link {
     width: fit-content;
     position: absolute;
-    left: calc(5% + 10px);
+    left: 5%;
     top: 20px;
     z-index: 1;
 }
@@ -52,10 +52,11 @@
     padding: 5px;
     border-radius: 10px;
     transition: all 0.2s;
+    border: solid 1px transparent;
 }
 
 #logo-wrapper:hover {
-    background-color: #e8e8e83e;
+    border-color: #6C91D9;
 }
 
 #logo {
@@ -192,7 +193,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-#text-n svg {
+p svg {
     height: 0.8em;
 }
 
@@ -288,12 +289,22 @@
 
     .inx-text-wrapper .inx-text svg,
     #inx-side-wrapper .inx-text svg,
-    #inx-text-wrapper svg {
+    #inx-text-wrapper svg,
+    p svg {
         fill: white;
     }
 
     #inx-light {
         background-color: #012030;
+    }
+
+    .gl-kf span,
+    .gl-tip span {
+        color: #ffffffa5 !important;
+    }
+
+    .gl-tip svg {
+        fill: #ffffffa5 !important;
     }
 }
 
@@ -313,11 +324,89 @@
     font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#inx-text-wrapper{
+#inx-text-wrapper {
     margin-bottom: 30px;
 }
 
 .inx-gallery-block svg {
     height: 0.8em !important;
     margin-right: 10px;
+}
+
+#heading {
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: #6C91D9;
+}
+
+.gl-tl {
+    border-left: solid 1px #B0C7D9;
+}
+
+.gl-kf {
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    border-left: solid 4px #B0C7D9;
+    padding-left: 26px;
+}
+
+.gl-tl #text-n {
+    padding-left: 30px;
+}
+
+.gl-kf span,
+.gl-tip span {
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    color: #000000a5;
+}
+
+.gl-tip {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.gl-tip svg {
+    fill: #000000a5;
+}
+
+.gl-imgs {
+    display: flex;
+}
+
+.gl-imgs:focus-within .gl-img {
+    width: 200px;
+    height: 200px;
+}
+
+.gl-img {
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-right: 6px;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#gl-1 {
+    background-image: url(../images/gl-1.webp);
+    margin-left: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#gl-2 {
+    background-image: url(../images/gl-2.webp);
+    border-radius: 5px;
+}
+
+#gl-3 {
+    background-image: url(../images/gl-3.webp);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
