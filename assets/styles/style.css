@@ -69,6 +69,7 @@
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 80px;
+    overflow: hidden;
 }
 
 #inx-heading {
@@ -389,7 +390,9 @@ p svg {
     background-position: center;
     background-size: cover;
     border-radius: 10px;
-    margin-right: 6px;
+    margin-right: 4px;
+    overflow-x: scroll;
+    overflow-y: hidden;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -409,4 +412,49 @@ p svg {
     background-image: url(../images/gl-3.webp);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+
+#gl-4 {
+    background-image: url(../images/gl-4.PNG);
+    margin-left: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    aspect-ratio: 16/9;
+    width: unset;
+}
+
+#gl-5 {
+    background-image: url(../images/gl-5.PNG);
+    border-radius: 5px;
+    aspect-ratio: 16/9;
+    width: unset;
+}
+
+#gl-6 {
+    background-image: url(../images/gl-6.PNG);
+    border-radius: 5px;
+    aspect-ratio: 16/9;
+    width: unset;
+}
+
+#gl-7 {
+    background-image: url(../images/gl-7.PNG);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    aspect-ratio: 16/9;
+    width: unset;
+}
+
+#gl-8 {
+    background-image: url(../images/gl-8.png);
+    margin-left: 30px;
+    aspect-ratio: 16/9;
+    width: unset;
+}
+
+#gl-9 {
+    background-image: url(../images/gl-9.jpg);
+    margin-left: 30px;
+    aspect-ratio: 3/4;
+    width: unset;
 }
