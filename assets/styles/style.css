@@ -380,8 +380,8 @@ p svg {
 }
 
 .gl-imgs:focus-within .gl-img {
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
 }
 
 .gl-img {
@@ -456,5 +456,61 @@ p svg {
     background-image: url(../images/gl-9.jpg);
     margin-left: 30px;
     aspect-ratio: 3/4;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: unset;
+}
+
+#gl-10 {
+    background-image: url(../images/gl-10.jpg);
+    aspect-ratio: 4/3;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: unset;
+}
+
+#gl-11 {
+    background-image: url(../images/gl-11.png);
+    margin-left: 30px;
+    aspect-ratio: 16/9;
+    width: unset;
+}
+
+#gl-12 {
+    background-image: url(../images/gl-12.png);
+    margin-left: 30px;
+    aspect-ratio: 1.19/1;
+    width: unset;
+}
+
+#gl-13 {
+    background-image: url(../images/gl-13.png);
+    margin-left: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#gl-14 {
+    background-image: url(../images/gl-14.webp);
+    border-radius: 5px;
+}
+
+#gl-15 {
+    background-image: url(../images/gl-15.png);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#gl-16 {
+    background-image: url(../images/gl-16.PNG);
+    margin-left: 30px;
+    aspect-ratio: 16/9;
+    width: unset;
+}
+
+#gl-17 {
+    background-image: url(../images/gl-17.PNG);
+    margin-left: 30px;
+    aspect-ratio: 16/9;
     width: unset;
 }
