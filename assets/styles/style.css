@@ -394,6 +394,11 @@ p svg {
     overflow-x: scroll;
     overflow-y: hidden;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scrollbar-width: none;
+}
+
+.gl-img::-webkit-scrollbar {
+    width: 0;
 }
 
 #gl-1 {
