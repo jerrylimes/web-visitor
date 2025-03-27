@@ -549,3 +549,11 @@ p svg {
 .inx-special-link #i-courses .inx-text:hover #text-n {
     color: white;
 }
+
+.inx-special-link #i-courses .inx-text #text-n svg {
+    fill: #005C53;
+}
+
+.inx-special-link #i-courses .inx-text:hover #text-n svg {
+    fill: white;
+}
