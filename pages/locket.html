@@ -1,0 +1,40 @@
+<div class="index-l">
+    <span id="text-n">
+        It deeply saddens me how everyone is so busy with everything. Superfluously. Scraping just the enough amount of getting the job done and the wage paid.
+    </span>
+    <span id="text-n">
+        The motives were never questioned, the emotives repressed and abandoned. We don't get paid for feeling things, and so we stopped feeling things. Simple logic.
+    </span>
+    <span id="text-n">
+        I'm not a counterpoint to all of this. But boy, do I wonder. I've met people who ring the bell over and over again for me: the less we speak, the more we communicate.
+    </span>
+    <span id="text-n">
+        I have my blessings for them, but they refuse to be vulnerable - even for a blessing. They argue eloquently yet faithlessly. They go through their days with no look on their face.
+    </span>
+    <span id="text-n">
+        I want their lives - no, I don't, I only yearn for their containment.
+    </span>
+</div>
+
+<script>
+    function getTime() {
+        const now = new Date();
+        const now_hour = now.getHours().toString().padStart(2, "0");
+        const now_minute = now.getMinutes().toString().padStart(2, "0");
+        const now_second = now.getSeconds().toString().padStart(2, "0");
+        const now_milisec = now.getMilliseconds().toString().padStart(3, "0");
+        document.getElementById("hour").innerText = now_hour;
+        document.getElementById("minute").innerText = now_minute;
+        document.getElementById("second").innerText = now_second;
+        document.getElementById("mili").innerText = now_milisec;
+    }
+    setInterval(() => {
+        getTime();
+    }, 500);
+</script>
+
+
+
+<!-- <span id="text-n">
+    <span id="hour"></span>:<span id="minute"></span>:<span id="second"></span>.<span id="mili"></span>
+</span> -->
