@@ -205,13 +205,13 @@ svg {
 
     #top-info.active {
         color: #fff;
-        background-color: #232323;
+        background-color: rgb(1, 27, 40);
     }
 
     .top-button:hover,
     #home:hover,
     #top-card:hover {
-        background-color: #232323;
+        background-color: rgb(1, 27, 40);
     }
 
     #ext,
@@ -220,7 +220,7 @@ svg {
     #top-card,
     #greeting,
     #inquiry {
-        background-color: #121212;
+        background-color: rgb(1, 32, 48);
     }
 
     #top-card {
