@@ -19,6 +19,8 @@ svg {
     background-color: transparent;
     position: relative;
     transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+    position: fixed;
+    z-index: 2;
 }
 
 #top-bar {
@@ -168,7 +170,8 @@ svg {
     }
 
     .top-button:hover,
-    #home:hover, #top-card:hover {
+    #home:hover,
+    #top-card:hover {
         background-color: #232323;
     }
 }
