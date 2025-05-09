@@ -84,9 +84,9 @@
     <script>
         const now = new Date();
         if (now.getHours() < 17) {
-            document.getElementById("greeting").innerText = "Bonjour, ça va?";
+            document.getElementById("greeting").innerText = "Bonjour";
         } else {
-            document.getElementById("greeting").innerText = "Bonsoir, ça va?";
+            document.getElementById("greeting").innerText = "Bonsoir";
         }
 
         function updateClock() {
@@ -133,6 +133,18 @@
         $("#top-card").hover(function () {
             document.getElementById("top-info").innerHTML = "<span class=\"top-info-heading\">Resume</span>Click for my resume.";
         });
+
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY) {
+                $("#ext, #inquiry").addClass("hide");
+            } else if (currentScrollY < lastScrollY) {
+                $("#ext, #inquiry").removeClass("hide");
+            }
+            lastScrollY = currentScrollY;
+        })
     </script>
 </body>
 
