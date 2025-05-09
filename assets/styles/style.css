@@ -42,11 +42,11 @@ svg {
 }
 
 #top-info.active {
-    background-color: #fafafa;
+    background-color: #f7f7f7;
     color: #000;
 }
 
-#top-info a{
+#top-info a {
     color: unset;
 }
 
@@ -147,8 +147,36 @@ svg {
     margin-right: 46px;
 }
 
+@media (prefers-color-scheme: dark) {
+    #logo {
+        background-image: url(../images/logo-button-dark.svg);
+    }
+
+    #greeting,
+    #clock {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .top-button svg,
+    #top-card svg {
+        fill: rgba(255, 255, 255, 0.5);
+    }
+
+    #top-info.active {
+        color: #fff;
+        background-color: #232323;
+    }
+
+    .top-button:hover,
+    #home:hover, #top-card:hover {
+        background-color: #232323;
+    }
+}
+
 @media (max-width: 430px) {
-    #clock, #greeting{
+
+    #clock,
+    #greeting {
         display: none;
     }
 }
