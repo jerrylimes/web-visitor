@@ -105,7 +105,8 @@ svg {
     background-image: url(../images/logo-button-light.svg);
 }
 
-#ext, #inquiry{
+#ext,
+#inquiry {
     transform: translateY(0px);
     scale: 100%;
     transition: all 0.3s cubic-bezier(0.65, 0, 0, 1.25);
@@ -113,7 +114,8 @@ svg {
     border-radius: 10px;
 }
 
-#ext.hide, #inquiry.hide{
+#ext.hide,
+#inquiry.hide {
     scale: 90%;
     transform: translateY(-60px);
 }
@@ -212,11 +214,16 @@ svg {
         background-color: #232323;
     }
 
-    #ext, #greet, #clock, #top-card, #greeting, #inquiry{
+    #ext,
+    #greet,
+    #clock,
+    #top-card,
+    #greeting,
+    #inquiry {
         background-color: #000000;
     }
 
-    #top-card{
+    #top-card {
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
     }
@@ -229,12 +236,13 @@ svg {
         display: none;
     }
 
-    #greet, #inquiry{
+    #greet,
+    #inquiry {
         border-radius: 10px !important;
     }
 }
 
-#content-unit{
+#content-unit {
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 60px;
