@@ -305,7 +305,7 @@ svg {
 #inquiry.welcome,
 #top-card.welcome,
 #clock.welcome {
-    background-color: rgb(1, 32, 48) !important;
+    background-color: #eef1f4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -316,7 +316,7 @@ svg {
     #inquiry.welcome,
     #top-card.welcome,
     #clock.welcome {
-        background-color: #eef1f4;
+        background-color: rgb(1, 32, 48) !important;
     }
 }
 
