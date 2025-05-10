@@ -46,7 +46,7 @@ svg {
 }
 
 #top-info.active {
-    background-color: #f7f7f7;
+    background-color: hsl(210, 21%, 98%);
     color: #000;
 }
 
@@ -63,7 +63,7 @@ svg {
     display: flex;
     justify-content: start;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #eef1f4;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -75,7 +75,7 @@ svg {
     color: rgba(0, 0, 0, 0.5);
     margin-left: 36px;
     height: 24px;
-    background-color: #ffffff;
+    background-color: #eef1f4;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 6px;
@@ -95,7 +95,7 @@ svg {
 }
 
 #home:hover {
-    background-color: #eaeaea;
+    background-color: hsl(210, 21%, 85%);
 }
 
 #logo {
@@ -110,7 +110,7 @@ svg {
     transform: translateY(0px);
     scale: 100%;
     transition: all 0.3s cubic-bezier(0.65, 0, 0, 1.25);
-    background-color: #fff;
+    background-color: #eef1f4;
     border-radius: 10px;
 }
 
@@ -141,7 +141,7 @@ svg {
 }
 
 .top-button:hover {
-    background-color: #eaeaea;
+    background-color: hsl(210, 21%, 85%);
 }
 
 #inquiry {
@@ -159,7 +159,7 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #eef1f4;
     border-radius: 10px;
 }
 
@@ -170,7 +170,7 @@ svg {
 }
 
 #top-card:hover {
-    background-color: #eaeaea;
+    background-color: hsl(210, 21%, 85%);
 }
 
 #clock {
@@ -178,7 +178,7 @@ svg {
     font-weight: bold;
     position: absolute;
     margin-right: 36px;
-    background-color: #ffffff;
+    background-color: #eef1f4;
     height: 24px;
     padding: 6px;
     display: flex;
