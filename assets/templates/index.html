@@ -2,4 +2,63 @@
 
 {% block content %}
 
+<style>
+    #greet,
+    #greeting,
+    #ext,
+    #inquiry,
+    #top-card,
+    #clock {
+        background-color: transparent;
+    }
+</style>
+
+<div id="welcome-image">
+    <span id="welcome-title">Handcrafting the internet</span>
+</div>
+
+<div id="index-text-clause">
+
+<p id="text-n">
+    <b>The internet is becoming more and more automated just like everything else.</b> After all, why shouldn't it be? In search for a less painful website construction process, most turned to Wix and Webflow. I turned to my hands.
+</p>
+
+<p id="text-n" class="index-data">
+    <b>3+ years</b> of web designing experience
+</p>
+
+<p id="text-n" class="index-data">
+    <b>10+ web projects</b> for clients ranging from schools to organizations
+</p>
+
+<p id="text-n" class="index-data">
+    <b>1600+ commits</b> for web repositories and counting
+</p>
+
+<p id="text-n">
+    This is me, and this is my website.
+</p>
+
+</div>
+
+<div class="empty-box"></div>
+
+<script>
+    $(document).ready(function () {
+        const elements = $("#greet, #greeting, #ext, #inquiry, #top-card, #clock");
+        elements.addClass("active");
+
+        $(window).trigger("scroll");
+
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop() >= $(window).height()) {
+                elements.addClass("welcome");
+            } else {
+                elements.removeClass("welcome");
+            }
+        });
+    });
+
+</script>
+
 {% endblock %}
