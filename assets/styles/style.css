@@ -4,6 +4,20 @@
  * Version: 0.3
  */
 
+@font-face {
+    font-family: 'Source Han Sans';
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/SourceHanSansCN-Regular-min.woff2), format('woff2');
+}
+
+@font-face {
+    font-family: 'Source Han Sans';
+    font-weight: 700;
+    font-style: normal;
+    src: url(../fonts/SourceHanSansCN-Bold-min.woff2), format('woff2');
+}
+
 body {
     margin: 0;
 }
@@ -29,11 +43,11 @@ svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #top-info {
-    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: transparent;
     overflow: hidden;
     position: absolute;
@@ -257,7 +271,7 @@ svg {
 }
 
 .text-n {
-    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     text-align: justify;
 }
@@ -296,6 +310,7 @@ svg {
     height: 100vh;
     background-image: url(../images/index-intro.webp);
     background-size: cover;
+    background-position: center center;
     position: relative;
 }
 
@@ -322,7 +337,7 @@ svg {
 
 #welcome-title {
     width: 100%;
-    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 24px;
     position: absolute;
     bottom: 50px;
@@ -330,8 +345,8 @@ svg {
     text-align: center;
 }
 
-#index-text-clause {
-    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+#index-text-clause .text-n {
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 50%;
     margin-left: 25%;
     text-align: center;
@@ -345,4 +360,49 @@ svg {
 
 .index-data b {
     font-size: 30px;
+}
+
+#index-notification {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 30px;
+    height: 6em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: hwb(0 100% 0%);
+    border: solid 1px hwb(209 58% 8%);
+    position: relative;
+}
+
+#index-notification button {
+    border: solid 1px hwb(209 58% 8%);
+    background-color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#index-notification button:hover {
+    background-color: hwb(209 58% 8%);
+}
+
+#index-notification svg {
+    height: 20px;
+    fill: hwb(209 58% 8%);
+}
+
+#index-notification button:hover svg {
+    fill: white;
 }
