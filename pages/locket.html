@@ -1,15 +1,100 @@
+<!-- HTML dump -->
+<style>
+    #greet,
+    #greeting,
+    #ext,
+    #inquiry,
+    #top-card,
+    #clock {
+        background-color: transparent;
+    }
+</style>
+
+<div id="welcome-image">
+    <span id="welcome-title">Handcrafting the internet</span>
+</div>
+
+<div id="index-notification">
+    <span class="text-n">
+        <b>I made a new calculator</b>
+    </span>
+    <span class="text-n">
+        give it a try
+    </span>
+    <a href="https://live.jerryly.top">
+        <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+            </svg>
+        </button>
+    </a>
+</div>
+
+<div id="index-text-clause">
+
+    <p class="text-n">
+        <b>The internet is becoming more and more automated just like everything else.</b> After all, why shouldn't it
+        be? In search for a less painful website construction process, most turned to Wix and Webflow. I turned to my
+        hands.
+    </p>
+
+    <p class="text-n" class="index-data">
+        <b>3+ years</b> of web designing experience
+    </p>
+
+    <p class="text-n" class="index-data">
+        <b>10+ web projects</b> for clients ranging from schools to organizations
+    </p>
+
+    <p class="text-n" class="index-data">
+        <b>1600+ commits</b> for web repositories and counting
+    </p>
+
+    <p class="text-n">
+        This is me, and this is my website.
+    </p>
+
+</div>
+
+<div class="empty-box"></div>
+
+<script>
+    $(document).ready(function () {
+        const elements = $("#greet, #greeting, #ext, #inquiry, #top-card, #clock");
+        elements.addClass("active");
+
+        $(window).trigger("scroll");
+
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop() >= $(window).height()) {
+                elements.addClass("welcome");
+            } else {
+                elements.removeClass("welcome");
+            }
+        });
+    });
+
+</script>
+
+
 <div class="index-l">
     <span id="text-n">
-        It deeply saddens me how everyone is so busy with everything. Superfluously. Scraping just the enough amount of getting the job done and the wage paid.
+        It deeply saddens me how everyone is so busy with everything. Superfluously. Scraping just the enough amount of
+        getting the job done and the wage paid.
     </span>
     <span id="text-n">
-        The motives were never questioned, the emotives repressed and abandoned. We don't get paid for feeling things, and so we stopped feeling things. Simple logic.
+        The motives were never questioned, the emotives repressed and abandoned. We don't get paid for feeling things,
+        and so we stopped feeling things. Simple logic.
     </span>
     <span id="text-n">
-        I'm not a counterpoint to all of this. But boy, do I wonder. I've met people who ring the bell over and over again for me: the less we speak, the more we communicate.
+        I'm not a counterpoint to all of this. But boy, do I wonder. I've met people who ring the bell over and over
+        again for me: the less we speak, the more we communicate.
     </span>
     <span id="text-n">
-        I have my blessings for them, but they refuse to be vulnerable - even for a blessing. They argue eloquently yet faithlessly. They go through their days with no look on their face.
+        I have my blessings for them, but they refuse to be vulnerable - even for a blessing. They argue eloquently yet
+        faithlessly. They go through their days with no look on their face.
     </span>
     <span id="text-n">
         I want their lives - no, I don't, I only yearn for their containment.
