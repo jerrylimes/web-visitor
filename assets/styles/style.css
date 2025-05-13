@@ -317,7 +317,7 @@ svg {
     font-size: 14px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
 }
 
@@ -325,11 +325,21 @@ svg {
     background-color: hwb(209 58% 8%);
 }
 
-#index-notification svg {
-    height: 20px;
-    fill: hwb(209 58% 8%);
+#index-notification span {
+    margin-top: 1px;
+    color: hwb(209 58% 8%);
 }
 
-#index-notification button:hover svg {
-    fill: white;
+#index-notification button:hover span {
+    color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    #index-notification {
+        background-color: #012030;
+    }
+
+    #index-notification button {
+        background-color: #012030;
+    }
 }
