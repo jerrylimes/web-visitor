@@ -49,6 +49,24 @@
 
         <div class="empty-box"></div>
     </div>
+
+    <div id="little-bulb-wrapper">
+        <div id="little-bulb"></div>
+        <span id="little-bulb-text"><b>慢速</b></span>
+        <span id="little-bulb-status">网站维护者失去与 GitHub 服务器的连接。网站更新可能延迟。</span>
+    </div>
 </div>
+
+<script>
+    $('#little-bulb-wrapper').click(function () {
+        $('#little-bulb-wrapper').addClass('active');
+    });
+
+    $(document).click(function (event) {
+        if (!$(event.target).closest('#little-bulb-wrapper').length) {
+            $('#little-bulb-wrapper').removeClass('active');
+        }
+    });
+</script>
 
 {% endblock %}
