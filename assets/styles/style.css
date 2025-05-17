@@ -22,11 +22,13 @@ body {
     margin: 0;
 }
 
-#tools-wrapper {
+#inno {
     width: 100vw;
     height: 50px;
     display: flex;
     justify-content: center;
+    position: fixed;
+    z-index: 2;
 }
 
 #tools {
@@ -41,6 +43,7 @@ body {
     margin-top: 12px;
     background-color: #eaeaea;
     transition: all 0.5s cubic-bezier(0, 0.8, 0, 1.08);
+    z-index: 2;
 }
 
 #tools.active.expanded {
@@ -65,13 +68,18 @@ body {
     background-color: #f8f8f8;
 }
 
-#tool a{
+#tool a {
     color: unset;
+}
+
+#input-field-link {
+    text-decoration: none;
 }
 
 #tools.active #home,
 #tools.active #input-field,
 #tools.active #contact,
+#tools.active #external-links,
 #tools.active #little-clock {
     opacity: 1;
 }
@@ -79,7 +87,8 @@ body {
 #home,
 #input-field,
 #contact,
-#little-clock {
+#little-clock,
+#external-links {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     overflow: hidden;
@@ -215,4 +224,244 @@ body {
     font-weight: bold;
     overflow: hidden;
     opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    #tools.expanded {
+        height: 400px !important;
+    }
+
+    #tools.expanded #tool {
+        width: fit-content;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    #tools.expanded #home,
+    #tools.expanded #input-field,
+    #tools.expanded #little-clock,
+    #tools.expanded #contact,
+    #tools.expanded #external-links {
+        width: auto;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 430px) {
+    #tools.expanded #tool {
+        width: fit-content;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    #tools.expanded {
+        height: 600px !important;
+        margin-right: 12px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #tools {
+        background-color: #282828 !important;
+    }
+
+    #home:hover,
+    #contact:hover,
+    #input-field:hover,
+    #external-links:hover,
+    #little-clock:hover {
+        background-color: #434343;
+    }
+
+    #input-field {
+        border-color: #333;
+    }
+
+    #logo {
+        background-image: url(../images/logo-button-dark.svg);
+    }
+}
+
+#backlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #eef1f4;
+    z-index: -1;
+}
+
+@media (prefers-color-scheme: dark) {
+    #backlight {
+        background-color: #012030;
+    }
+}
+
+#copyright-info {
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+}
+
+#copyright-info a {
+    color: unset;
+    text-decoration: none;
+}
+
+.empty-box {
+    height: 100vh;
+}
+
+/* index styles */
+
+#welcome-image {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/index-intro.webp);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+#welcome-title {
+    width: 100%;
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    position: absolute;
+    bottom: 50px;
+    opacity: 0.5;
+    text-align: center;
+}
+
+#index-text-clause .text-n {
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    font-size: 22px;
+}
+
+.index-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.index-data b {
+    font-size: 30px;
+}
+
+#index-notification {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 30px;
+    height: 6em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: hwb(0 100% 0%);
+    border: solid 1px hwb(209 58% 8%);
+    position: relative;
+}
+
+#index-notification button {
+    border: solid 1px hwb(209 58% 8%);
+    background-color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+#index-notification button:hover {
+    background-color: hwb(209 58% 8%);
+}
+
+#index-notification span {
+    margin-top: 1px;
+    color: hwb(209 58% 8%);
+}
+
+#index-notification button:hover span {
+    color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    #index-notification {
+        background-color: #012030;
+    }
+
+    #index-notification button {
+        background-color: #012030;
+    }
+}
+
+#little-bulb-wrapper {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+#little-bulb-wrapper.active {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #fdfdfdd5;
+    backdrop-filter: blur(12px);
+    border: solid 1px hsl(0, 0%, 100%);
+}
+
+#little-bulb {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: hsl(35, 69%, 43%);
+}
+
+#little-bulb-wrapper.active #little-bulb {
+    margin-left: 5px;
+}
+
+#little-bulb-wrapper.active #little-bulb-text,
+#little-bulb-wrapper.active #little-bulb-status {
+    display: inline;
+    margin-left: 10px;
+}
+
+#little-bulb-text,
+#little-bulb-status {
+    display: none;
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+#little-bulb:hover {
+    background-color: #e2ac60;
 }
