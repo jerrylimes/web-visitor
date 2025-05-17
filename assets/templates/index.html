@@ -2,7 +2,35 @@
 
 {% block content %}
 
-<div id="content-unit">
+<div id="tools-wrapper">
+    <div id="tools">
+        <div id="tool">
+            <div id="home">
+                <div id="logo"></div>
+                <span class="tools-caption">You're viewing a page handcrafted by 李江源 Jerry Li</span>
+            </div>
+            <a href="mailto:jerrylovesapple@icloud.com">
+                <input type="text" id="input-field" placeholder="@ write me an email">
+            </a>
+            <div id="little-clock">
+                <span id="clock-text">
+                    <span id="hour"></span>:<span id="minute"></span></span>
+                </span>
+                <span class="tools-caption">current time at your region</span>
+            </div>
+            <div id="contact">
+                <span class="material-symbols-outlined">person_add</span>
+                <span class="tools-caption">Available on <a href="https://github.com/jerrylovescheese">GitHub</a>, on <a href="https://x.com/jerrylovestweet">Twitter</a>, and <a href="https://www.linkedin.com/in/jiangyuan-li-051095327/">LinkedIn</a></span>
+            </div>
+            <div id="external-links">
+                <span class="material-symbols-outlined">open_in_new</span>
+                <span class="tools-caption">Follow external links at the <a href="https://live.jerryly.top">live</a> and <a href="https://blog.jerryly.top">blog</a> subdomains</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div id="content-unit">
     <div id="welcome-image">
         <span id="welcome-title">Handcrafting the internet</span>
     </div>
@@ -67,6 +95,36 @@
             $('#little-bulb-wrapper').removeClass('active');
         }
     });
+</script> -->
+
+<script>
+    $('#tools-wrapper').hover(function () {
+        if (!$('#tools').hasClass('expanded')) {
+            $('#tools').toggleClass('active');            
+        }
+    });
+
+    $('#tools').click(function () {
+        $('#tools').addClass('expanded');
+    });
+
+    $(document).click(function (event) {
+        if (!$(event.target).closest('#tools, #tools-wrapper').length) {
+            $('#tools').removeClass('active');
+            $('#tools').removeClass('expanded');
+        }
+    });
+
+    function getTime() {
+        const now = new Date();
+        const now_hour = now.getHours().toString().padStart(2, "0");
+        const now_minute = now.getMinutes().toString().padStart(2, "0");
+        document.getElementById("hour").innerText = now_hour;
+        document.getElementById("minute").innerText = now_minute;
+    }
+    setInterval(() => {
+        getTime();
+    }, 1000);
 </script>
 
 {% endblock %}
