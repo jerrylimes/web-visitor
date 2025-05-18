@@ -23,11 +23,13 @@ body {
 }
 
 #inno {
-    width: 100vw;
+    width: 100%;
     height: 50px;
     display: flex;
     justify-content: center;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 2;
 }
 
@@ -41,7 +43,7 @@ body {
     justify-content: start;
     align-items: start;
     margin-top: 12px;
-    background-color: #eaeaea;
+    background-color: #757575;
     transition: all 0.5s cubic-bezier(0, 0.8, 0, 1.08);
     z-index: 2;
 }
@@ -50,6 +52,8 @@ body {
     width: 947px;
     max-width: calc(100vw - 24px);
     height: 200px;
+    margin-left: 12px;
+    margin-right: 12px;
     background-color: #f8f8f8;
 }
 
