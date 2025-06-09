@@ -441,7 +441,7 @@ body {
 #wwdc-sign .text-n {
     font-size: 30px;
     font-weight: bold;
-    color: white;
+    color: rgb(0, 0, 0);
     text-shadow: 0px 2px 2px hwb(0 0% 100% / 0.1),
         0px 4px 4px hwb(0 0% 100% / 0.1),
         0px 8px 8px hwb(0 0% 100% / 0.1),
@@ -503,9 +503,14 @@ body {
         16px 16px 16px hwb(0 0% 100% / 0.05);
 }
 
+.wwdc-section .text-n {
+    color: black;
+}
+
 .wwdc-h {
     font-weight: bold;
     font-size: 22px;
+    color: black;
 }
 
 .wwdc-section a {
@@ -521,4 +526,8 @@ body {
 .wwdc-section .wwdc-h {
     display: flex;
     align-items: center;
+}
+
+.wwdc-h .material-symbols-outlined {
+    margin-right: 20px;
 }
