@@ -428,10 +428,17 @@ body {
     }
 }
 
-#closed-sign{
-    width: 100%;
+#closed-sign,
+#wwdc-sign {
+    width: calc(100% - 60px);
     height: 100vh;
+    margin-left: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#wwdc-sign .text-n {
+    font-size: 30px;
+    font-weight: bold;
 }
