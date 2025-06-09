@@ -4,7 +4,7 @@
 
 <div id="content-unit">
     <div id="wwdc-sign">
-        <div class="text-n">WWDC25!!!</div>
+        <div class="text-n">WWDC25</div>
         <hr>
         <div class="text-n">
             <span id="wwdc-countdown">
@@ -13,6 +13,9 @@
                 <span class="second"></span>
             </span>
         </div>
+    </div>
+    <div id="wwdc-hero">
+        <video src="https://developer.apple.com/wwdc25/images/p3/wwdc25-sf-motion-p3_2x.mp4" autoplay muted playsinline></video>
     </div>
 </div>
 
@@ -34,9 +37,9 @@
             m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             s = Math.floor((diff % (1000 * 60)) / 1000);
         }
-        document.querySelector('#wwdc-countdown .hour').innerText = h.toString().padStart(2, '0') + 'h ';
-        document.querySelector('#wwdc-countdown .minute').innerText = m.toString().padStart(2, '0') + 'm ';
-        document.querySelector('#wwdc-countdown .second').innerText = s.toString().padStart(2, '0') + 's';
+        document.querySelector('#wwdc-countdown .hour').innerText = h.toString().padStart(2, '0') + ' : ';
+        document.querySelector('#wwdc-countdown .minute').innerText = m.toString().padStart(2, '0') + ' : ';
+        document.querySelector('#wwdc-countdown .second').innerText = s.toString().padStart(2, '0');
     }
     setInterval(() => {
         updateRemainingTime();
