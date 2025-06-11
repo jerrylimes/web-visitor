@@ -435,10 +435,11 @@ body {
     margin-left: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
 
 #wwdc-sign .text-n {
+    margin-bottom: 30px;
     font-size: 30px;
     font-weight: bold;
     color: rgb(0, 0, 0);
