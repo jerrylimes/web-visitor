@@ -2,66 +2,6 @@
 
 {% block content %}
 
-<div id="imp"></div>
-
-<div id="content-unit">
-    <div id="wwdc-sign">
-        <div class="text-n">W. T. F.</div>
-    </div>
-    <div id="wwdc-hero">
-        <video src="https://developer.apple.com/wwdc25/images/p3/wwdc25-sf-motion-p3_2x.mp4" autoplay muted playsinline
-            loop></video>
-    </div>
-    <div id="wwdc-sections">
-        <div class="wwdc-section">
-            <p class="text-n wwdc-h">
-                <span class="material-symbols-outlined">favorite</span>
-                Too good to be true
-            </p>
-            <p class="text-n">
-                My jaw was on the floor for one and a half hour straight. It was so meticulous and practically a
-                confection. Of course, in regards of readability and accessibility, improvements are necessary, but I've
-                been using iOS 26 beta 1 for a day now and it's not that illegible.
-            </p>
-        </div>
-        <div class="wwdc-section">
-            <p class="text-n wwdc-h">
-                <span class="material-symbols-outlined">favorite</span>
-                You're only hating on it because it makes you seem cool
-            </p>
-            <p class="text-n">
-                When actually you're just taking issue with yourself - it's your device. Don't upgrade it if you don't
-                like it, it's not like anyone's forcing you to do that.
-            </p>
-        </div>
-    </div>
-</div>
-
-<script>
-    function updateRemainingTime() {
-        const now = new Date();
-        const hours = now.getHours;
-        const minutes = now.getMinutes;
-        const seconds = now.getSeconds;
-        const target = new Date();
-        target.setMonth(5);
-        target.setDate(10);
-        target.setHours(1, 0, 0, 0);
-
-        const diff = target - now;
-        let h = 0, m = 0, s = 0;
-        if (diff > 0) {
-            h = Math.floor(diff / (1000 * 60 * 60));
-            m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            s = Math.floor((diff % (1000 * 60)) / 1000);
-        }
-        document.querySelector('#wwdc-countdown .hour').innerText = Math.abs(h).toString().padStart(2, '0') + ' : ';
-        document.querySelector('#wwdc-countdown .minute').innerText = Math.abs(m).toString().padStart(2, '0') + ' : ';
-        document.querySelector('#wwdc-countdown .second').innerText = Math.abs(s).toString().padStart(2, '0');
-    }
-    setInterval(() => {
-        updateRemainingTime();
-    }, 1000);
-</script>
+<div id="content-unit"></div>
 
 {% endblock %}
