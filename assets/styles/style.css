@@ -9,6 +9,9 @@ body {
 }
 
 #common-header {
+    position: fixed;
+    top: 8px;
+    left: 8px;
     overflow: hidden;
     z-index: 3;
 }
@@ -20,9 +23,6 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-    position: fixed;
-    top: 8px;
-    left: 8px;
 }
 
 #compound a,
@@ -91,11 +91,9 @@ body {
 #details.display {
     width: fit-content;
     display: block;
-    margin-left: 8px;
-    margin-right: 8px;
     padding: 10px;
     border-radius: 10px;
-    margin-top: 46px;
+    margin-top: 8px;
     background-color: #fafafa;
 }
 
@@ -149,5 +147,12 @@ body {
 
     #details li {
         border-bottom-color: transparent;
+    }
+
+    #home-button.active,
+    #history-button.active,
+    #chat-button.active,
+    #web-stories-button.active {
+        background-color: #303030 !important;
     }
 }
