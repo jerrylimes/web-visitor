@@ -1,0 +1,153 @@
+/*
+ * Author: Jerry Li
+ * Version: 16.0
+ * Date: Jul 11 2025
+ */
+
+body {
+    margin: 0;
+}
+
+#common-header {
+    overflow: hidden;
+    z-index: 3;
+}
+
+#compound {
+    width: 100%;
+    height: 30px;
+    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    top: 8px;
+    left: 8px;
+}
+
+#compound a,
+#details a {
+    color: unset;
+    text-decoration: none;
+}
+
+#logo {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/logo-button-light.svg);
+    background-size: contain;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#c-links,
+#c-links a {
+    display: flex;
+    align-items: flex-end;
+}
+
+#c-links a {
+    border-radius: 10px;
+    padding: 5px;
+    padding-right: 8px;
+    font-size: 14px;
+}
+
+#c-links a:not(:last-child) {
+    margin-right: 5px;
+}
+
+#c-links a:hover {
+    background-color: #e5e5e5;
+}
+
+#c-links a .material-symbols-outlined {
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 5px;
+}
+
+#home-button.active .material-symbols-outlined,
+#history-button.active .material-symbols-outlined,
+#chat-button.active .material-symbols-outlined,
+#web-stories-button.active .material-symbols-outlined {
+    font-weight: 500;
+}
+
+#home-button.active,
+#history-button.active,
+#chat-button.active,
+#web-stories-button.active {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+#details {
+    display: none;
+    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+#details.display {
+    width: fit-content;
+    display: block;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 46px;
+    background-color: #fafafa;
+}
+
+#details ul {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 1fr;
+}
+
+#details span {
+    display: block;
+    padding: 2px;
+}
+
+#details li {
+    list-style: none;
+    padding: 2px;
+    border-bottom: 1px solid transparent;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1em;
+}
+
+#details .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.file-type {
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+@media (max-width: 430px) {
+    .c-label {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #logo {
+        background-image: url(../images/logo-button-dark.svg);
+    }
+
+    #c-links a:hover {
+        background-color: #383838;
+    }
+
+    #details.display {
+        background-color: #202020;
+    }
+
+    #details li {
+        border-bottom-color: transparent;
+    }
+}
