@@ -187,10 +187,11 @@
     font-weight: 400 !important;
 }
 
-#home-button.active,
-#history-button.active,
-#chat-button.active,
-#web-stories-button.active {
+.home-button.active,
+.history-button.active,
+.chat-button.active,
+.web-stories-button.active {
+    font-weight: 400;
     background-color: #f3f3f3;
 }
 
@@ -210,13 +211,14 @@
 #cloth li {
     list-style: none;
     padding: 2px;
+    padding-left: 0;
     border-bottom: 1px solid transparent;
     display: grid;
     grid-template-columns: 2fr 1fr 1.5em;
     transition: all 0.2s;
 }
 
-#cloth li a {
+#cloth a {
     text-decoration: none;
 }
 
@@ -250,7 +252,7 @@
 
     #blinds,
     #drawer {
-        background-color: black;
+        background-color: transparent;
     }
 
     #turnstile.expanded #blinds,
@@ -260,5 +262,19 @@
 
     #turnstile.expanded {
         background-color: #1d1d1da4;
+    }
+
+    .home-button.active,
+    .history-button.active,
+    .chat-button.active,
+    .web-stories-button.active {
+        background-color: #232323;
+    }
+}
+
+@media (max-width: 430px) {
+    #turnstile.expanded {
+        background-color: #171717d2;
+        backdrop-filter: blur(0.2em);
     }
 }

@@ -76,20 +76,26 @@
         const month = today.getMonth() + 1;
         const date = today.getDate();
         const hour = today.getHours();
-        if (today.getHours() < 18) {
-            document.getElementById("welcome").innerText = "Bonjour";
-        } else {
-            document.getElementById("welcome").innerText = "Bonsoir";
+        function updateWelcomeMessage() {
+            const now = new Date();
+            if (now.getHours() < 18) {
+                document.getElementById("welcome").innerText = "Bonjour";
+            } else {
+                document.getElementById("welcome").innerText = "Bonsoir";
+            }
         }
+        setInterval(() => {
+            updateWelcomeMessage();
+        }, 1000);
 
         if (window.location.href.includes("https://jerryly.top")) {
-            document.querySelector("#home-button").classList.add("active");
+            document.querySelector(".home-button").classList.add("active");
         } else if (window.location.href.includes("https://old.jerryly.top")) {
-            document.querySelector("#history-button").classList.add("active");
+            document.querySelector(".history-button").classList.add("active");
         } else if (window.location.href.includes("https://blog.jerryly.top")) {
-            document.querySelector("#chat-button").classList.add("active");
+            document.querySelector(".chat-button").classList.add("active");
         } else if (window.location.href.includes("https://demo.jerryly.top")) {
-            document.querySelector("#web-stories-button").classList.add("active");
+            document.querySelector(".web-stories-button").classList.add("active");
         }
 
         $(".home-button").hover(
