@@ -3,6 +3,43 @@
 {% block content %}
 
 <div id="content-unit">
-
+    <div id="index-block-1">
+        <h2>OpenAI announces GPT-5 in new livestream</h2>
+        <p class="text-n">livestream starts in
+            <span id="index-cd-hr"></span> hours
+            <span id="index-cd-min"></span> minutes
+            <span id="index-cd-sec"></span> seconds
+        </p>
+    </div>
 </div>
+
+<script>
+    function countdown() {
+        const now = new Date();
+        const hr = now.getHours();
+        const min = now.getMinutes();
+        const sec = now.getSeconds();
+        // Target: 1 AM on August 8
+        const target = new Date(now.getFullYear(), 7, 8, 1, 0, 0); // August is month 7 (0-based)
+        const diff = target - now;
+
+        if (diff > 0) {
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("index-cd-hr").innerText = hours;
+            document.getElementById("index-cd-min").innerText = minutes;
+            document.getElementById("index-cd-sec").innerText = seconds;
+        } else {
+            document.getElementById("index-cd-hr").innerText = "0";
+            document.getElementById("index-cd-min").innerText = "0";
+            document.getElementById("index-cd-sec").innerText = "0";
+        }
+    }
+
+    setInterval(() => {
+        countdown();
+    }, 1000);
+</script>
 {% endblock %}
