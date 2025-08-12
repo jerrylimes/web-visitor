@@ -39,16 +39,6 @@ body {
     border-bottom: solid 1px #eee;
 }
 
-#logo {
-    width: 100px;
-    height: 100px;
-    position: fixed;
-    top: 40px;
-    background-image: url(../images/aug-12-2025-2.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 #welcome,
 .subtitle {
     font-size: 22px;
@@ -78,6 +68,41 @@ body {
     margin: 0;
 }
 
+
+.logo-container {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+}
+
+.logo {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.2s ease;
+}
+
+.logo-1 {
+    background-image: url("../images/aug-12-2025-2.svg");
+    opacity: 1;
+    z-index: 1;
+}
+
+.logo-2 {
+    background-image: url("../images/aug-12-2025-3.svg");
+    z-index: 2;
+    opacity: 0;
+}
+
+.logo-container:hover .logo-2 {
+    opacity: 1;
+}
+
+.logo-container:hover .logo-1 {
+    opacity: 0;
+}
+
 @media (max-width: 768px) {
     #disc-grid {
         width: 100%;
@@ -85,7 +110,7 @@ body {
         padding: 20px;
     }
 
-    #logo {
+    .logo-container {
         width: 30px;
         height: 30px;
         top: 20px;
