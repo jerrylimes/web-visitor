@@ -1,370 +1,108 @@
 /*
  * Author: Jerry Li
- * Date: Jul 22 2025
- * Version: 17.0
+ * Version: 18.0
+ * Date: Aug 12 2025
  */
 
 @font-face {
     font-family: 'Source Han Sans';
     font-weight: normal;
-    font-style: normal;
     src: url(../fonts/SourceHanSansCN-Regular-min.woff2);
 }
 
 @font-face {
     font-family: 'Source Han Sans';
     font-weight: bold;
-    font-style: normal;
     src: url(../fonts/SourceHanSansCN-Bold-min.woff2);
 }
 
-#menu {
-    width: 36px;
-    height: calc(100vh - 20px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    transition: all 0.4s cubic-bezier(0, 1, 0, 1.03);
-    z-index: 3;
+body {
+    margin: 0;
+}
+
+#disc {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#menu::-webkit-scrollbar {
-    width: 0;
-}
-
-#logo-link {
-    display: block;
-    width: 24px;
-}
-
-#logo-wrapper {
-    width: 24px;
-    padding: 6px;
-    border-radius: 8px;
-}
-
-#logo-wrapper:hover {
-    background-color: #f0f0f0;
+#disc-grid {
+    width: 80%;
+    padding: 40px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    border-bottom: solid 1px #eee;
 }
 
 #logo {
-    width: 24px;
-    height: 24px;
-    background-image: url(../images/logo-button-light.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    transition: all 0.2s cubic-bezier(0, 1, 0, 1);
-}
-
-#menu:hover #logo {
-    opacity: 1;
-}
-
-#menu.expanded {
-    width: 300px;
-}
-
-#menu.expanded #logo {
-    opacity: 1;
-}
-
-#location-indicator {
-    width: 0;
-    overflow: hidden;
-    padding: 0px;
-}
-
-.subdomain {
-    max-width: 113px;
-    border: solid 1px #eee;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    overflow: hidden;
-}
-
-.subdomain span {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#menu a {
-    text-decoration: none;
-    color: unset;
-}
-
-#menu.expanded #location-indicator {
-    width: calc(300px - 20px);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 10px;
-    padding: 10px;
-}
-
-#menu.expanded #location-indicator div {
-    margin-bottom: 10px;
-}
-
-#menu.expanded #logo-wrapper {
-    width: 44px;
-    height: 44px;
-    padding: 10px;
-}
-
-#menu.expanded #logo {
-    width: 44px;
-    height: 44px;
-}
-
-#content-unit {
-    transition: all 0.3s cubic-bezier(0, 0.6, 0, 1.05);
-}
-
-#content-unit.shifted {
-    margin-left: 310px;
-    filter: blur(0.5em);
-}
-
-.text-n {
-    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-}
-
-#welcome {
-    display: none;
-}
-
-#menu.expanded #welcome {
-    display: block;
-    padding-left: 10px;
-    font-weight: light;
-    font-size: 22px;
-}
-
-#call {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#welcome {
-    padding-right: 10px;
-}
-
-#location-indicator a:hover .subdomain {
-    background-color: #eee;
-}
-
-#subdomain-4:hover {
-    background-color: #eee;
-}
-
-.subdomain.shrink,
-.subdomain-link.shrink {
-    display: block;
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin-bottom: 0;
-}
-
-#location-indicator.widen {
-    grid-template-columns: 1fr !important;
-}
-
-#location-indicator.widen div:first-child {
-    margin-bottom: 0 !important;
-}
-
-#location-indicator.widen .subdomain {
-    max-width: 280px;
-}
-
-#subdomain-4 ul {
-    display: none;
-}
-
-#location-indicator.widen #subdomain-4 ul {
-    display: grid;
-    margin: 0;
-    padding: 0;
-    grid-template-columns: 1fr;
-    overflow: hidden;
-}
-
-#subdomain-4 span:not(:first-child) {
-    display: block;
-    padding: 2px;
-}
-
-#subdomain-4 li {
-    list-style: none;
-    padding: 2px;
-    padding-left: 0;
-    border-bottom: 1px solid transparent;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1.5em;
-    transition: all 0.2s;
-    font-size: 14px;
-    font-weight: normal;
-}
-
-#subdomain-4 a {
-    text-decoration: none;
-}
-
-#subdomain-4 li:hover {
-    font-weight: bold;
-}
-
-#subdomain-4 li:hover .material-symbols-outlined {
-    font-weight: bold;
-}
-
-#subdomain-4 .material-symbols-outlined:not(:first-child) {
-    transition: all 0.2s;
-    font-size: 18px;
-}
-
-.file-type {
-    opacity: 0.5;
-    font-size: 14px;
-}
-
-#m-copyright {
-    padding: 10px;
-    font-size: 14px;
-    opacity: 0.5;
-    position: absolute;
-    bottom: 6px;
-    display: none;
-}
-
-#menu.expanded #m-copyright {
-    display: block;
-}
-
-#menu.expanded #m-copyright.hidden {
-    display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-    #logo {
-        background-image: url(../images/logo-button-dark.svg);
-    }
-
-    .subdomain {
-        border-color: #333;
-    }
-
-    #location-indicator a:hover .subdomain,
-    #subdomain-4:hover {
-        background-color: #333;
-    }
-
-    #logo-wrapper:hover {
-        background-color: #242424;
-    }
-}
-
-#copyright-info {
-    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: lighter;
-    font-size: 15px;
-    margin-left: 40px;
-    transition: all 0.3s cubic-bezier(0, 0.6, 0, 1.05);
-}
-
-#copyright-info.shifted {
-    margin-left: 310px;
-    filter: blur(0.5em);
-}
-
-#copyright-info a {
-    text-decoration: none;
-}
-
-/* index.html */
-
-.index-block {
-    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-left: 46px;
-    margin-right: 46px;
-    height: 80vh;
-    border-radius: 10px;
-    margin-top: 16px;
-    border: solid 1px #eee;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 40px;
+    background-image: url(../images/aug-12-2025-2.svg);
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#welcome,
+.subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    height: 100px;
     display: flex;
-    justify-content: end;
-    align-items: start;
-    flex-direction: column;
-    color: white;
+    align-items: center;
 }
 
-#index-block-1 {
-    background-image: url(../images/Snipaste_2025-08-08_01-01-15.png);
+.subtitle {
+    height: 60px;
 }
 
-.index-block .text-n {
-    font-size: 20px;
-}
-
-@media (prefers-color-scheme: dark) {
-    .index-block {
-        border-color: #333;
-    }
-
-    .index-block button {
-        background-color: #2a2a2a !important;
-    }
-}
-
-.index-block button {
-    display: block;
-    padding: 10px;
-    border: none;
+.disc-block {
+    border-left: solid 1px #eee;
+    border-bottom: solid 1px #eee;
     font-size: 18px;
-    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 5px;
-    background-color: #e4e4e4;
+    padding-left: 30px;
+    padding-bottom: 30px;
 }
 
-.index-block a {
-    text-decoration: none;
-    color: unset;
+.disc-block:last-child {
+    border-bottom-color: transparent;
 }
 
-.empty-box {
-    height: 50vh;
+.disc-block ul {
+    margin: 0;
 }
 
-.empty-box-small {
-    height: 30px;
+@media (max-width: 768px) {
+    #disc-grid {
+        width: 100%;
+        grid-template-columns: 50px 1fr;
+        padding: 20px;
+    }
+
+    #logo {
+        width: 30px;
+        height: 30px;
+        top: 20px;
+    }
 }
 
-.index-block-text {
-    width: calc(100% - 40px);
-    background-image: linear-gradient(to top, black, rgba(255, 255, 255, 0));
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#index-block-2 {
-    background-image: url(../images/Aug-4-2025资源\ 4.jpg);
+.emphasis-before-lists {
+    height: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 #copyright-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: normal;
 }
@@ -372,4 +110,8 @@
 #copyright-info a {
     text-decoration: none;
     color: unset;
+}
+
+#footer-links {
+    margin-top: 0;
 }
