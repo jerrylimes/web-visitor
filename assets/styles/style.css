@@ -259,6 +259,10 @@ body {
     display: block;
 }
 
+#link-wrapper a:nth-child(1) {
+    font-weight: bold;
+}
+
 #disc {
     width: 100%;
     display: flex;
