@@ -307,52 +307,36 @@ body {
     margin: 0;
 }
 
-
-.logo-container {
+.self-portrait {
+    width: 120px;
+    height: 160px;
     position: fixed;
-    width: 100px;
-    height: 100px;
-}
-
-.logo {
-    position: absolute;
-    inset: 0;
+    background-image: url(../images/IMG_2152.jpeg);
     background-size: cover;
     background-position: center;
-    transition: opacity 0.2s ease;
-}
-
-.logo-1 {
-    background-image: url("../images/aug-12-2025-2.svg");
-    opacity: 1;
-    z-index: 1;
-}
-
-.logo-2 {
-    background-image: url("../images/aug-12-2025-3.svg");
-    z-index: 2;
-    opacity: 0;
-}
-
-.logo-container:hover .logo-2 {
-    opacity: 1;
-}
-
-.logo-container:hover .logo-1 {
-    opacity: 0;
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {
     #disc-grid {
         width: 100%;
-        grid-template-columns: 50px 1fr;
+        grid-template-columns: 1fr;
         padding: 20px;
     }
 
-    .logo-container {
-        width: 30px;
-        height: 30px;
-        top: 20px;
+    .self-portrait {
+        width: 240px;
+        height: 320px;
+        position: unset;
+        margin-left: 20px;
+    }
+
+    #placeholder {
+        display: none;
+    }
+
+    .disc-block {
+        border-left: none;
     }
 }
 
