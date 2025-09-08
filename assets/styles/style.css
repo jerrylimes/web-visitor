@@ -392,12 +392,16 @@ body {
     text-decoration: none;
 }
 
-#flyover-content {
+#flyover-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flyover-content {
     width: fit-content;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba(135, 207, 235, 0.25);
-    color: hsl(197, 71%, 43%);
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
@@ -406,16 +410,33 @@ body {
     transition: all 0.2s;
 }
 
-#flyover-content .material-symbols-outlined {
+.flyover-content:hover {
+    color: white !important;
+}
+
+#fly-1 {
+    background-color: rgba(135, 207, 235, 0.25);
+    color: hsl(197, 71%, 43%);
+}
+
+#fly-2 {
+    background-color: rgba(235, 212, 135, 0.25);
+    color: hsl(34, 71%, 43%);
+}
+
+.flyover-content .material-symbols-outlined {
     font-size: 20px;
     transition: all 0.2s;
 }
 
-#flyover-content:hover {
+#fly-1:hover {
     background-color: hsl(197, 71%, 43%);
-    color: white;
 }
 
-#flyover-content:hover .material-symbols-outlined {
+#fly-2:hover {
+    background-color: hsl(34, 71%, 43%);
+}
+
+.flyover-content:hover .material-symbols-outlined {
     transform: translateX(3px);
 }
