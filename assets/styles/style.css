@@ -420,8 +420,8 @@ body {
 }
 
 #fly-2 {
-    background-color: rgba(235, 212, 135, 0.25);
-    color: hsl(34, 71%, 43%);
+    background-color: rgba(239, 106, 42, 0.25);
+    color: rgb(239, 106, 42);
 }
 
 .flyover-content .material-symbols-outlined {
@@ -434,7 +434,7 @@ body {
 }
 
 #fly-2:hover {
-    background-color: hsl(34, 71%, 43%);
+    background-color: rgb(239, 106, 42);
 }
 
 .flyover-content:hover .material-symbols-outlined {
