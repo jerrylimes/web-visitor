@@ -25,6 +25,7 @@ body {
     height: 100%;
     top: 0;
     bottom: 0;
+    z-index: 3;
 }
 
 #logo-wrapper {
