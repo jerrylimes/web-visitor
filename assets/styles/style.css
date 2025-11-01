@@ -20,9 +20,45 @@ body {
     margin: 0;
 }
 
+#handle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #handle-backdrop {
     width: 100%;
     height: 50px;
+    overflow: hidden;
+    background-image: url(https://media.jerryly.cn/rect4581.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: all 0.2s;
+    position: absolute;
+}
+
+#handle-backdrop:hover {
+    opacity: 0.5;
+}
+
+#logo {
+    aspect-ratio: 150/67;
+    height: 30px;
+    margin-top: 10px;
+    background-image: url(https://media.jerryly.cn/home-button-light.svg);
+    z-index: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    #handle-backdrop {
+        background-image: url(https://media.jerryly.cn/rect4581-dark.png);
+    }
+
+    #logo {
+        background-image: url(https://media.jerryly.cn/home-button-dark.svg);
+    }
 }
 
 /* general styles */

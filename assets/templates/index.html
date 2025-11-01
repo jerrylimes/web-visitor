@@ -3,25 +3,8 @@
 {% block content %}
 
 <div id="handle">
-    <div id="handle-backdrop">
-        <object id="rect-svg" type="image/svg+xml"></object>
-    </div>
+    <div id="handle-backdrop"></div>
+    <div id="logo"></div>
 </div>
-
-<script>
-    const obj = document.getElementById("rect-svg");
-
-    function updateSVG() {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            obj.data = "https://media.jerryly.cn/rect4581-dark.svg";
-        } else {
-            obj.data = "https://media.jerryly.cn/rect4581.svg";
-        }
-    }
-
-    updateSVG();
-    window.matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", updateSVG);
-</script>
 
 {% endblock %}
