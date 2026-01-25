@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://unpkg.com/@algolia/sitesearch@latest/dist/search.min.css" />
+<script src="https://unpkg.com/@algolia/sitesearch@latest/dist/search.min.js"></script>
+
+<br><br><br><br>
+<div id="search"></div>
+<script>
+    SiteSearch.init({
+        container: "#search",
+        applicationId: "ROZDHR6MVH",
+        apiKey: "37eea2a7da7935fc8975151450609945",
+        indexName: "jerrys_website_pages",
+        attributes: {
+            primaryText: "keywords", // the attribute to display in the hits list
+            secondaryText: undefined, // the secondary attribute to display in the hits list
+            tertiaryText: undefined, // the tertiary attribute to display in the hits list
+            url: "", // the URL of the hit
+            image: undefined // the image URL of the hit
+        },
+        darkMode: false,
+    });
+</script>
