@@ -3,14 +3,14 @@
 {% block content %}
 
 <div id="content-unit">
-    <div id="flyover">
+    <!-- <div id="flyover">
         <a id="flyover-wrapper" href="./pages/search.html">
             <div class="flyover-content" id="fly-1">
                 search&ensp;
                 <span class="material-symbols-outlined">arrow_forward</span>
             </div>
         </a>
-    </div>
+    </div> -->
     <div id="disc">
         <div id="disc-grid">
             <div class="self-portrait"></div>
@@ -46,6 +46,10 @@
                             <li>CS 2130: Computer Systems and Organizations 1</li>
                             <li>MATH 3350: Applied Linear Algebra</li>
                             <li>SYS 2001: Case Study of System Engineering Concepts</li>
+                            <li>CS 2120: Discrete Math and Theory 1</li>
+                            <li>CS 2501: Preparing for Undergraduate Research</li>
+                            <li>CS 3140: Software Development Essentials</li>
+                            <li>CS 3205: HCI in Software Development</li>
                         </ul>
                     </div>
                 </div>
@@ -161,38 +165,5 @@
         </a>
     </p>
 </div>
-
-<script>
-
-    function updateCountdown(targetTime, daysEntry, hoursEntry, minutesEntry, secondsEntry) {
-        const target = new Date(targetTime).getTime();
-        const now = new Date();
-        const remain = target - now;
-        let days = Math.floor(remain / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((remain % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((remain % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((remain % (1000 * 60)) / 1000);
-        if (days < 0) {
-            days = 0;
-        }
-        if (hours < 0) {
-            hours = 0;
-        }
-        if (minutes < 0) {
-            minutes = 0;
-        }
-        if (seconds < 0) {
-            seconds = 0;
-        }
-        document.getElementById(daysEntry).textContent = Math.abs(days) + " d";
-        document.getElementById(hoursEntry).textContent = Math.abs(hours) + " hr";
-        document.getElementById(minutesEntry).textContent = Math.abs(minutes) + " min";
-        document.getElementById(secondsEntry).textContent = Math.abs(seconds) + " sec";
-    }
-
-    setInterval(() => {
-        updateCountdown("October 3, 2025 00:00:00", "days", "hours", "minutes", "seconds");
-    }, 1000);
-</script>
 
 {% endblock %}
