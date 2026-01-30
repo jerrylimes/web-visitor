@@ -281,14 +281,19 @@ body {
 }
 
 #disc-grid {
-    width: calc(90% - 220px);
-    margin-left: 200px;
+    width: calc(80% - 80px);
+    margin-left: 0;
     padding: 40px;
     padding-bottom: 0;
     overflow: hidden;
     display: grid;
     grid-template-columns: 140px 1fr;
     border-bottom: solid 1px #eee;
+}
+
+#disc-grid.move {
+    width: calc(90% - 220px);
+    margin-left: 220px;
 }
 
 #welcome,
@@ -335,6 +340,7 @@ body {
         width: 100%;
         grid-template-columns: 1fr;
         padding: 20px;
+        margin-left: 0;
     }
 
     .self-portrait {
@@ -350,6 +356,8 @@ body {
 
     .disc-block {
         border-left: none;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
