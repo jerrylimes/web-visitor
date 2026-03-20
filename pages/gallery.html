@@ -1,0 +1,14 @@
+<div class="content-unit">
+    <p class="text-n gallery-title">
+        <q>Art is about trying. Trying is inherently embarrassing.</q>
+    </p>
+</div>
+
+<script>
+    $("#directory-expand").click(() => {
+        $(".content-unit").toggleClass("move");
+    });
+    if (window.innerWidth > 768) {
+        $(".content-unit").addClass("move");
+    }
+</script>

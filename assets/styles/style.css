@@ -23,6 +23,13 @@
     src: url(https://media.jerryly.cn/ModernDOS8x16.ttf);
 }
 
+@font-face {
+    font-family: 'Hoefler Text Swash';
+    font-weight: normal;
+    font-style: normal;
+    src: url(https://media.jerryly.cn/HoeflerText-Italic-Swash.ttf);
+}
+
 /* general styles */
 
 body {
@@ -291,7 +298,7 @@ body {
     border-bottom: solid 1px #eee;
 }
 
-#disc-grid.move {
+.move {
     width: calc(90% - 220px);
     margin-left: 220px;
 }
@@ -456,4 +463,15 @@ body {
 
 .flyover-content:hover .material-symbols-outlined {
     transform: translateX(3px);
+}
+
+/* gallery.html */
+
+.content-unit {
+    margin-left: 234px;
+    margin-right: 14px;
+}
+
+.gallery-title {
+    font-family: 'Hoefler Text Swash';
 }
