@@ -467,11 +467,49 @@ body {
 
 /* gallery.html */
 
+.content-unit.move {
+    margin-left: 244px;
+    margin-right: 24px;
+}
+
 .content-unit {
-    margin-left: 234px;
-    margin-right: 14px;
+    margin-top: 60px;
+    margin-left: 24px;
 }
 
 .gallery-title {
-    font-family: 'Hoefler Text Swash';
+    font-family: 'Hoefler Text Swash', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    line-height: 60px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.gallery-text {
+    font-family: 'Charter', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.gallery-subtitle {
+    font-family: 'Hoefler Text Swash', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.gallery-img {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.gallery-img img {
+    width: 300px;
+}
+
+.gallery-widescreen {
+    width: 320px;
+    height: 180px;
+}
+
+.gallery-widescreen img {
+    width: 320px;
 }
