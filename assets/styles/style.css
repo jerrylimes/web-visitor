@@ -508,6 +508,7 @@ body {
 }
 
 .gallery-img img {
+    border-radius: 14px;
     width: 240px;
 }
 
@@ -561,6 +562,4 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     border-radius: 14px;
-    overflow-x: scroll;
-    overflow-y: hidden;
 }
