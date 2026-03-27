@@ -530,6 +530,15 @@ body {
     width: 240px;
 }
 
+.gallery-phone {
+    width: 240px;
+    height: 522px;
+}
+
+.gallery-phone img {
+    width: 240px;
+}
+
 @media (max-width: 430px) {
     .gallery-img {
         width: 272px;
