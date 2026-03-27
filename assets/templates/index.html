@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div id="content-unit">
+<div class="content-unit">
     <!-- <div id="flyover">
         <a id="flyover-wrapper" href="./pages/search.html">
             <div class="flyover-content" id="fly-1">
@@ -165,14 +165,5 @@
         </a>
     </p>
 </div>
-
-<script>
-    $("#directory-expand").click(() => {
-        $("#disc-grid").toggleClass("move");
-    });
-    if (window.innerWidth > 768) {
-        $("#disc-grid").addClass("move");
-    }
-</script>
 
 {% endblock %}
