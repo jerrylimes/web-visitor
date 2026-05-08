@@ -276,6 +276,14 @@ body {
     opacity: 0.5;
 }
 
+#copyright-info.move {
+    width: calc(100% - 284px);
+    margin-left: 252px;
+    margin-top: 30px;
+    flex-direction: column;
+    margin-right: 12px;
+}
+
 .copyright-info {
     margin: 0;
 }
