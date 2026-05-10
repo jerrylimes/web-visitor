@@ -5,10 +5,6 @@
 
 /* general */
 
-body {
-    background-color: #f8f8f8;
-}
-
 #boilerplate {
     width: 240px;
     height: 62px;
@@ -196,13 +192,12 @@ body {
 }
 
 .content-unit {
-    width: calc(100% - 44px);
+    width: calc(100% - 46px);
     margin-left: 12px;
     margin-top: 66px;
     margin-right: 12px;
     padding: 10px;
-    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
-    background-color: white;
+    border: solid 1px #eee;
     border-radius: 20px;
     transition: all 0.4s cubic-bezier(0, 0.8, 0, 1);
 }
@@ -308,13 +303,8 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: unset;
-    }
-
     .content-unit {
-        background-color: #282828;
-        box-shadow: none;
+        border-color: #333;
     }
 
     #navigation-buttons {
