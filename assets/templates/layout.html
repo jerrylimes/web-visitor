@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.16.1/themes/satellite-min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -203,6 +204,9 @@
     </header>
 
     <main>
+        <br><br><br><br><br>
+        <div id="search"></div>
+        <div id="hits"></div>
         {% block content %}{% endblock %}
     </main>
 
@@ -236,6 +240,8 @@
         </p>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.52.1/dist/lite/builds/browser.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.96.2/dist/instantsearch.production.min.js"></script>
     <script>
         $('#menu').click(() => {
             $('#boilerplate').toggleClass('expand');
@@ -269,6 +275,36 @@
         setInterval(() => {
             boilerplateClock();
         }, 1000);
+
+        // Algolia search
+        const { liteClient: algoliasearch } = window["algoliasearch/lite"];
+        const searchClient = algoliasearch(
+            "KX9DZYTWEQ",
+            "96c5fee5982c80cab33a0cb9f793ec7a"
+        );
+        const search = instantsearch({
+            indexName: "my_crawler_pages",
+            searchClient
+        });
+        search.addWidgets([
+            instantsearch.widgets.searchBox({
+                container: "#search",
+            }),
+            instantsearch.widgets.hits({
+                container: "#hits",
+                templates: {
+                    item(hit) {
+                        return `
+                            <a href="${hit.url}">
+                                <h3>${hit.title}</h3>
+                                <p>${hit.content || ""}</p>
+                            </a>
+                        `;
+                    }
+                }
+            })
+        ]);
+        search.start();
     </script>
 </body>
 
