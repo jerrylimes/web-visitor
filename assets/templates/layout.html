@@ -117,13 +117,24 @@
                         return `
                             <a href="${hit.url}">
                                 <h3>${hit.title}</h3>
-                                <p>${hit.content || ""}</p>
+                                <p>${hit.content || "No results."}</p>
                             </a>
                         `;
                     }
                 }
             })
         ]);
+
+        search.on('render', () => {
+            try {
+                const query = search.mainIndex.getHelper().state.query || '';
+                document.getElementById('hits').style.display = query.trim() ? 'block' : 'none';
+            } catch (e) {
+                // fallback: show hits
+                document.getElementById('hits').style.display = 'block';
+            }
+        });
+
         search.start();
     </script>
 </body>
