@@ -45,22 +45,84 @@
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
     padding: 8px;
+    z-index: 4;
 }
 
 #counter-buttons {
     width: 70%;
     margin-left: 15%;
-    display: flex;
     justify-content: start;
-    align-items: center;
-    gap: 4px;
+    column-gap: 4px;
+    row-gap: 0;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    overflow: hidden;
+}
+
+#counter-buttons.called {
+    row-gap: 4px;
 }
 
 .counter-button {
     padding: 6px 8px;
     border-radius: 10px;
     line-height: 18px;
-    transition: all 0.2s;
+    transition: height 0.2s;
+}
+
+.counter-i {
+    width: 0;
+    max-height: 0;
+    padding: 0;
+    opacity: 0.4;
+    font-size: 12px;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.2s, opacity 0.2s;
+}
+
+.counter-i.called {
+    width: fit-content;
+    max-height: 200px;
+    padding: 0px 8px;
+    opacity: 0.5;
+}
+
+.counter-list {
+    width: 0;
+    max-height: 0;
+    padding: 0;
+    border-radius: 10px;
+    transition: max-height 0.2s, opacity 0.2s;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.counter-list.called {
+    width: fit-content;
+    max-height: 630px;
+    padding: 0px 8px;
+    opacity: 1;
+}
+
+.counter-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+.counter-list ul a {
+    text-decoration: none;
+    color: unset;
+}
+
+.counter-list ul a li {
+    font-size: 18px;
+}
+
+.counter-list .counter-list-main-domain a li {
+    font-size: 14px;
 }
 
 .counter-button:hover {
@@ -78,7 +140,8 @@
     top: 15%;
     width: 70%;
     height: 70%;
-    z-index: 2;
+    z-index: 5;
+    transition: all 0.2s;
 }
 
 #counter-search.expanded {
@@ -115,7 +178,7 @@
 
 #hits {
     margin-top: 10px;
-    height: calc(100% - 50px);
+    max-height: calc(100% - 50px);
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -186,5 +249,37 @@
 
     #hits {
         box-shadow: none;
+    }
+}
+
+@media (max-width: 767px) {
+    #counter-buttons.called {
+        grid-template-columns: repeat(6, auto);
+    }
+
+    #counter-buttons.called>span:empty {
+        display: none;
+    }
+
+    #counter-buttons.called>div:empty {
+        display: none;
+    }
+
+    #counter-buttons.called>.counter-i.called,
+    #counter-buttons.called>.counter-list.called {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .counter-i.called,
+    .counter-list.called {
+        padding: 0;
+    }
+
+    #counter-buttons,
+    .content-unit,
+    #copyright-info {
+        width: calc(100% - 20px);
+        margin-left: 10px;
     }
 }
