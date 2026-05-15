@@ -291,7 +291,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     #counter-buttons.called {
         grid-template-columns: repeat(6, auto);
     }
