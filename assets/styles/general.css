@@ -113,6 +113,8 @@
     width: fit-content;
     max-height: 440px;
     padding: 0px 8px;
+    overflow-x: hidden;
+    overflow-y: scroll;
     opacity: 1;
 }
 
