@@ -2,16 +2,44 @@
 
 {% block content %}
 
+<div id="sky-backdrop"></div>
+
 <div class="content-unit">
-    <p class="text-n">
-        Check out my <a href="./pages/resume.html">resume (web)</a>.
-        <br>
-        I also have my <a
-            href="https://raw.githubusercontent.com/jerrylimes/jerrylimes/refs/heads/main/Resume%20(Mar%2014%202026).pdf">resume
-            (PDF)</a>.
-        <br>
-        There's also a <a href="./pages/gallery.html">gallery</a>.
-    </p>
+    <div id="sky-layout">
+        <div id="my-signature">
+            <img src="https://media.jerryly.cn/May-20-2026-signature.svg">
+        </div>
+        <div id="sky-homepage-button">
+            <a class="sky-homepage-link" href="./pages/resume.html">
+                <div class="sky-homepage-buttons">
+                    Resume (web)
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+            </a>
+            <div class="sky-separator"></div>
+            <a class="sky-homepage-link"
+                href="https://raw.githubusercontent.com/jerrylimes/jerrylimes/refs/heads/main/Resume%20(Mar%2014%202026).pdf">
+                <div class="sky-homepage-buttons">
+                    Resume (PDF)
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+            </a>
+            <div class="sky-separator"></div>
+            <a class="sky-homepage-link" href="./pages/gallery.html">
+                <div class="sky-homepage-buttons">
+                    Gallery
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+            </a>
+            <div class="sky-separator"></div>
+            <a class="sky-homepage-link" href="https://live.jerryly.cn">
+                <div class="sky-homepage-buttons">
+                    News
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

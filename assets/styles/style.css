@@ -2,36 +2,36 @@
     font-family: 'Modern DOS 8x16';
     font-weight: normal;
     font-style: normal;
-    src: url(https://media.jerryly.cn/ModernDOS8x16.ttf);
+    src: url(https://media.jerryly.cn/fonts/ModernDOS8x16.ttf);
 }
 
 @font-face {
     font-family: 'Hoefler Text Swash';
     font-weight: normal;
     font-style: normal;
-    src: url(https://media.jerryly.cn/HoeflerText-Italic-Swash.ttf);
+    src: url(https://media.jerryly.cn/fonts/HoeflerText-Italic-Swash.ttf);
 }
 
 @font-face {
     font-family: 'Doto';
     font-weight: normal;
     font-style: normal;
-    src: url(https://media.jerryly.cn/Doto-VariableFont_ROND%2Cwght.ttf);
+    src: url(https://media.jerryly.cn/fonts/Doto-VariableFont_ROND%2Cwght.ttf);
+}
+
+/* styling for home page readability concerns */
+
+.counter-button,
+.counter-i,
+.counter-list {
+    color: white;
+}
+
+.counter-button:hover {
+    background-color: hsl(205, 40%, 55%);
 }
 
 /* index.html */
-
-#simple #link-wrapper {
-    display: none;
-}
-
-#simple-wrapper.expanded #link-wrapper {
-    display: block;
-}
-
-#link-wrapper a:nth-child(1) {
-    font-weight: bold;
-}
 
 #disc {
     width: 100%;
@@ -278,4 +278,71 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     border-radius: 14px;
+}
+
+#sky-backdrop {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://media.jerryly.cn/Image-Cropped.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#sky-layout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+#my-signature {
+    filter: invert(1);
+    width: 200px;
+}
+
+#sky-homepage-button {
+    width: 100%;
+    height: 40px;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+    place-items: stretch;
+    border: solid 1px white;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.sky-homepage-buttons {
+    height: 28px;
+    padding: 6px 8px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sky-homepage-buttons .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.sky-homepage-buttons:hover {
+    color: black;
+    background-color: white;
+}
+
+.sky-separator {
+    width: 1px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: white;
+}
+
+.sky-homepage-link {
+    text-decoration: none;
+    color: unset;
 }
