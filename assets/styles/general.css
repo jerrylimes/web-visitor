@@ -1,33 +1,33 @@
 /*
  * Author: Jerry Li
- * Last updated: May 12, 2026 
+ * Last updated: May 12, 2026
  */
 
 /* fonts */
 
 @font-face {
-    font-family: 'Source Han Sans';
+    font-family: "Source Han Sans";
     font-weight: normal;
     font-style: normal;
-    src: url(../fonts/SourceHanSansCN-Regular-min.woff2);
+    src: url(https://media.jerryly.cn/fonts/SourceHanSansCN-Regular-min.woff2);
 }
 
 @font-face {
-    font-family: 'Source Han Sans';
+    font-family: "Source Han Sans";
     font-weight: bold;
     font-style: normal;
-    src: url(../fonts/SourceHanSansCN-Bold-min.woff2);
+    src: url(https://media.jerryly.cn/fonts/SourceHanSansCN-Bold-min.woff2);
 }
 
 @font-face {
-    font-family: 'Source Han Serif';
+    font-family: "Source Han Serif";
     font-weight: normal;
     font-style: normal;
     src: url(../fonts/SourceHanSerifCNRegularSubset.woff2);
 }
 
 @font-face {
-    font-family: 'Source Han Serif';
+    font-family: "Source Han Serif";
     font-weight: bold;
     font-style: normal;
     src: url(../fonts/SourceHanSerifCNBoldSubset.woff2);
@@ -38,7 +38,20 @@
 #counter {
     width: calc(100% - 16px);
     height: 30px;
-    font-family: 'Source Han Serif', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        "Source Han Serif",
+        "Inter",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
     font-size: 14px;
     position: fixed;
     top: 0;
@@ -89,7 +102,9 @@
     font-size: 12px;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.4s cubic-bezier(0, 0.5, 0, 1), opacity 0.2s;
+    transition:
+        max-height 0.4s cubic-bezier(0, 0.5, 0, 1),
+        opacity 0.2s;
 }
 
 .counter-i.called {
@@ -104,7 +119,9 @@
     max-height: 0;
     padding: 0;
     border-radius: 10px;
-    transition: max-height 0.4s cubic-bezier(0, 0.8, 0, 1), opacity 0.2s;
+    transition:
+        max-height 0.4s cubic-bezier(0, 0.8, 0, 1),
+        opacity 0.2s;
     overflow: hidden;
     opacity: 0;
 }
@@ -170,11 +187,37 @@
     width: 70%;
     margin-left: 15%;
     margin-top: 46px;
-    font-family: 'Source Han Serif', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        "Source Han Serif",
+        "Inter",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
 }
 
 .text-n {
-    font-family: 'Source Han Serif', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        "Source Han Serif",
+        "Inter",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
 }
 
 #search,
@@ -185,7 +228,20 @@
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(4px);
-    font-family: 'Source Han Serif', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        "Source Han Serif",
+        "Inter",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
     box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
 }
 
@@ -212,7 +268,20 @@
 #copyright-info {
     width: 70%;
     margin-left: 15%;
-    font-family: 'Source Han Serif', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        "Source Han Serif",
+        "Inter",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
     font-size: 14px;
     opacity: 0.5;
     display: flex;
@@ -273,7 +342,9 @@
         background-color: #222;
         border-color: #333;
         color: #eee;
-        box-shadow: 0 0 0 1px rgba(35, 38, 59, .05), 0 1px 3px 0 rgba(35, 38, 59, .15);
+        box-shadow:
+            0 0 0 1px rgba(35, 38, 59, 0.05),
+            0 1px 3px 0 rgba(35, 38, 59, 0.15);
     }
 
     #hits .ais-Hits--empty {
@@ -296,16 +367,16 @@
         grid-template-columns: repeat(6, auto);
     }
 
-    #counter-buttons.called>span:empty {
+    #counter-buttons.called > span:empty {
         display: none;
     }
 
-    #counter-buttons.called>div:empty {
+    #counter-buttons.called > div:empty {
         display: none;
     }
 
-    #counter-buttons.called>.counter-i.called,
-    #counter-buttons.called>.counter-list.called {
+    #counter-buttons.called > .counter-i.called,
+    #counter-buttons.called > .counter-list.called {
         grid-column: 1 / -1;
         width: 100%;
     }

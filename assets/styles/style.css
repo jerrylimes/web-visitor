@@ -1,19 +1,19 @@
 @font-face {
-    font-family: 'Modern DOS 8x16';
+    font-family: "Modern DOS 8x16";
     font-weight: normal;
     font-style: normal;
     src: url(https://media.jerryly.cn/fonts/ModernDOS8x16.ttf);
 }
 
 @font-face {
-    font-family: 'Hoefler Text Swash';
+    font-family: "Hoefler Text Swash";
     font-weight: normal;
     font-style: normal;
     src: url(https://media.jerryly.cn/fonts/HoeflerText-Italic-Swash.ttf);
 }
 
 @font-face {
-    font-family: 'Doto';
+    font-family: "Doto";
     font-weight: normal;
     font-style: normal;
     src: url(https://media.jerryly.cn/fonts/Doto-VariableFont_ROND%2Cwght.ttf);
@@ -39,7 +39,20 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        "Inter",
+        "Source Han Sans",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
 }
 
 .move {
@@ -191,7 +204,9 @@
 /* gallery.html */
 
 .gallery-title {
-    font-family: 'Hoefler Text Swash', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:
+        "Hoefler Text Swash", Cambria, Cochin, Georgia, Times,
+        "Times New Roman", serif;
     font-size: 50px;
     line-height: 60px;
     margin-top: 24px;
@@ -199,11 +214,14 @@
 }
 
 .gallery-text {
-    font-family: 'Charter', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:
+        "Charter", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .gallery-subtitle {
-    font-family: 'Hoefler Text Swash', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:
+        "Hoefler Text Swash", Cambria, Cochin, Georgia, Times,
+        "Times New Roman", serif;
     font-size: 20px;
 }
 
@@ -292,57 +310,160 @@
 }
 
 #sky-layout {
-    height: 100vh;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    column-gap: 0px;
+}
+
+#sky-layout.gap-enable {
+    column-gap: 10px;
+}
+
+#my-logo {
+    width: 30px;
 }
 
 #my-signature {
-    filter: invert(1);
-    width: 200px;
-}
-
-#sky-homepage-button {
-    width: 100%;
-    height: 60px;
-    max-width: 700px;
-    display: grid;
-    grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
-    place-items: stretch;
-    border: solid 1px white;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.sky-homepage-buttons {
-    height: 48px;
-    padding: 6px 8px;
-    color: white;
+    width: 300px;
     display: flex;
     justify-content: space-between;
+}
+
+#my-sign {
+    width: 5em;
+}
+
+.sky-card {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 16px;
+    background-color: hsl(198 17% 93% / 1);
+    overflow: hidden;
+    position: relative;
+}
+
+#sky-bottom-block {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sky-card-title {
+    font-family:
+        "Source Han Sans",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sky-email {
+    font-family:
+        "Source Han Sans",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    text-decoration: none;
+    color: unset;
+    opacity: 0.6;
+}
+
+.sky-card button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.sky-homepage-buttons .material-symbols-outlined {
-    font-size: 18px;
+.sky-card button:hover {
+    background-color: hsl(198 17% 83% / 1);
 }
 
-.sky-homepage-buttons:hover {
-    color: black;
-    background-color: white;
+.sky-more {
+    background-color: transparent;
+    border: none;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    transition: all cubic-bezier(0, 0.7, 0, 1) 0.3s;
 }
 
-.sky-separator {
-    width: 1px;
-    height: 50px;
-    margin-top: 5px;
-    background-color: white;
+.sky-more ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: grid;
+    height: 198px;
+    grid-template-rows: repeat(4, 1fr);
 }
 
-.sky-homepage-link {
+.sky-more ul a {
     text-decoration: none;
-    color: unset;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.sky-more ul a:hover {
+    background-color: white;
+    color: black;
+}
+
+.sky-more ul li {
+    font-family:
+        "Source Han Sans",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.sky-more.show {
+    background-color: transparent;
+    border: solid 1px white;
+    width: 298px;
+    height: 198px;
+    padding: 10px;
 }

@@ -1,45 +1,78 @@
-{% extends "page.html" %}
-
-{% block content %}
+{% extends "page.html" %} {% block content %}
 
 <div id="sky-backdrop"></div>
 
+<style>
+    #counter-buttons {
+        opacity: 0;
+        transition: all 0.2s;
+    }
+
+    #counter.expand #counter-buttons {
+        opacity: 1;
+    }
+
+    #counter-buttons:hover {
+        opacity: 1;
+    }
+
+    .content-unit {
+        margin-top: 0;
+        height: 100vh;
+    }
+</style>
+
 <div class="content-unit">
     <div id="sky-layout">
-        <div id="my-signature">
-            <img src="https://media.jerryly.cn/May-20-2026-signature.svg">
+        <div class="sky-card">
+            <div id="my-signature">
+                <img
+                    id="my-logo"
+                    src="https://media.jerryly.cn/home-square-dark.svg"
+                />
+                <img
+                    id="my-sign"
+                    src="https://media.jerryly.cn/May-20-2026-signature.svg"
+                />
+            </div>
+            <div id="sky-bottom-block">
+                <span class="text-n sky-card-title">李江源</span>
+                <span class="text-n sky-card-text">
+                    <a class="sky-email" href="mailto:jerrylimee@icloud.com"
+                        >jerrylimee@icloud.com</a
+                    >
+                </span>
+            </div>
+            <button id="sky-flip-card">
+                <span class="material-symbols-outlined">more_horiz</span>
+            </button>
         </div>
-        <div id="sky-homepage-button">
-            <a class="sky-homepage-link" href="./pages/resume.html">
-                <div class="sky-homepage-buttons">
-                    Resume (web)
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                </div>
-            </a>
-            <div class="sky-separator"></div>
-            <a class="sky-homepage-link"
-                href="https://raw.githubusercontent.com/jerrylimes/jerrylimes/refs/heads/main/Resume%20(Mar%2014%202026).pdf">
-                <div class="sky-homepage-buttons">
-                    Resume (PDF)
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                </div>
-            </a>
-            <div class="sky-separator"></div>
-            <a class="sky-homepage-link" href="./pages/gallery.html">
-                <div class="sky-homepage-buttons">
-                    Gallery
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                </div>
-            </a>
-            <div class="sky-separator"></div>
-            <a class="sky-homepage-link" href="https://live.jerryly.cn">
-                <div class="sky-homepage-buttons">
-                    News
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                </div>
-            </a>
+        <div class="sky-card sky-more">
+            <ul>
+                <a href="https://jerryly.cn/pages/gallery.html">
+                    <li>Gallery</li>
+                </a>
+                <a href="https://jerryly.cn/pages/resume.html">
+                    <li>Resume</li>
+                </a>
+                <a
+                    href="https://raw.githubusercontent.com/jerrylimes/jerrylimes/refs/heads/main/Resume%20(Mar%2014%202026).pdf"
+                >
+                    <li>Resume (PDF)</li>
+                </a>
+                <a href="https://old.jerryly.cn/pages/contact.html">
+                    <li>Contacts</li>
+                </a>
+            </ul>
         </div>
     </div>
 </div>
+
+<script>
+    $("#sky-flip-card").click(() => {
+        $("#sky-layout").toggleClass("gap-enable");
+        $(".sky-more").toggleClass("show");
+    });
+</script>
 
 {% endblock %}
