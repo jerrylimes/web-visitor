@@ -3,6 +3,18 @@
 <div id="sky-backdrop"></div>
 
 <style>
+    /* styling for home page readability concerns */
+
+    .counter-button,
+    .counter-i,
+    .counter-list {
+        color: white;
+    }
+
+    .counter-button:hover {
+        background-color: hsl(205, 40%, 55%);
+    }
+
     #counter-buttons {
         opacity: 0;
         transition: all 0.2s;
@@ -50,18 +62,38 @@
         <div class="sky-card sky-more">
             <ul>
                 <a href="https://jerryly.cn/pages/gallery.html">
-                    <li>Gallery</li>
+                    <li>
+                        <span class="material-symbols-outlined">
+                            gallery_thumbnail
+                        </span>
+                        Gallery
+                    </li>
                 </a>
                 <a href="https://jerryly.cn/pages/resume.html">
-                    <li>Resume</li>
+                    <li>
+                        <span class="material-symbols-outlined">
+                            account_box
+                        </span>
+                        Resume
+                    </li>
                 </a>
                 <a
                     href="https://raw.githubusercontent.com/jerrylimes/jerrylimes/refs/heads/main/Resume%20(Mar%2014%202026).pdf"
                 >
-                    <li>Resume (PDF)</li>
+                    <li>
+                        <span class="material-symbols-outlined">
+                            account_box
+                        </span>
+                        Resume (PDF)
+                    </li>
                 </a>
-                <a href="https://old.jerryly.cn/pages/contact.html">
-                    <li>Contacts</li>
+                <a href="../pages/contacts.html">
+                    <li>
+                        <span class="material-symbols-outlined">
+                            headset_mic
+                        </span>
+                        Contacts
+                    </li>
                 </a>
             </ul>
         </div>

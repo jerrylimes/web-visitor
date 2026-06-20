@@ -19,18 +19,6 @@
     src: url(https://media.jerryly.cn/fonts/Doto-VariableFont_ROND%2Cwght.ttf);
 }
 
-/* styling for home page readability concerns */
-
-.counter-button,
-.counter-i,
-.counter-list {
-    color: white;
-}
-
-.counter-button:hover {
-    background-color: hsl(205, 40%, 55%);
-}
-
 /* index.html */
 
 #disc {
@@ -341,8 +329,10 @@
     padding: 10px;
     border-radius: 16px;
     background-color: hsl(198 17% 93% / 1);
+    color: black;
     overflow: hidden;
     position: relative;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
 }
 
 #sky-bottom-block {
@@ -402,6 +392,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 
 .sky-card button:hover {
@@ -458,6 +449,9 @@
         sans-serif;
     padding-left: 10px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .sky-more.show {
@@ -466,4 +460,36 @@
     width: 298px;
     height: 198px;
     padding: 10px;
+}
+
+#list-of-contacts {
+    width: 100%;
+    overflow: scroll;
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#list-of-contacts li {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #eee;
+}
+
+#list-of-contacts img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+    #list-of-contacts img {
+        filter: invert(1);
+    }
+
+    #list-of-contacts li {
+        border-bottom-color: #333;
+    }
 }
