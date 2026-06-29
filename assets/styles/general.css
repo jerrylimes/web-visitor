@@ -337,6 +337,14 @@
         background-color: rgba(18, 18, 18, 0);
     }
 
+    #counter.expand {
+        background-color: rgba(18, 18, 18, 0.9);
+    }
+
+    #counter.expand.further {
+        background-color: rgba(18, 18, 18, 0.9);
+    }
+
     #counter-search-button {
         border-color: #333;
     }
