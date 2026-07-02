@@ -226,10 +226,16 @@
         sans-serif;
 }
 
+#counter-search.expanded #search,
+#counter-search.expanded #search input,
+#counter-search.expanded #search form {
+    height: 60px;
+}
+
 #search,
 #search input,
 #search form {
-    height: 60px;
+    height: 0;
 }
 
 #search,
