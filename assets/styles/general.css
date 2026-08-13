@@ -380,6 +380,10 @@
             0 1px 3px 0 rgba(35, 38, 59, 0.15);
     }
 
+    .ais-SearchBox-form {
+        background-color: unset;
+    }
+
     #hits .ais-Hits--empty {
         background-color: #222;
         border-color: #333;
