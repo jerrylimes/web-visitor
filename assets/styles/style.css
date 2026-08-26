@@ -286,15 +286,82 @@
     border-radius: 14px;
 }
 
-#sky-backdrop {
+#index-tiles {
     width: 100%;
-    height: 100%;
-    background-image: url(https://media.jerryly.cn/Image-Cropped.jpg);
-    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+.index-intermediate {
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+}
+
+#index-intermediate-1 .index-tile:nth-child(1) {
+    background-color: #CEE2EE;
+}
+
+#index-intermediate-1 .index-tile:nth-child(2) {
+    background-color: #88A7BA;
+}
+
+#index-intermediate-1 .index-tile:nth-child(3) {
+    background-color: #486F87;
+}
+
+#index-intermediate-1 .index-tile:nth-child(4) {
+    background-color: #1C3F54;
+}
+
+#index-intermediate-1 .index-tile:nth-child(5) {
+    background-color: #072233;
+}
+
+#index-intermediate-2 .index-tile:nth-child(1) {
+    background-color: #C6E7ED;
+}
+
+#index-intermediate-2 .index-tile:nth-child(2) {
+    background-color: #8DB3BA;
+}
+
+#index-intermediate-2 .index-tile:nth-child(3) {
+    background-color: #4C7E87;
+}
+
+#index-intermediate-2 .index-tile:nth-child(4) {
+    background-color: #1E4C54;
+}
+
+#index-intermediate-2 .index-tile:nth-child(5) {
+    background-color: #082D33;
+}
+
+#index-intermediate-3 .index-tile:nth-child(1) {
+    background-color: #C4EDD0;
+}
+
+#index-intermediate-3 .index-tile:nth-child(2) {
+    background-color: #8FBA9C;
+}
+
+#index-intermediate-3 .index-tile:nth-child(3) {
+    background-color: #4D875E;
+}
+
+#index-intermediate-3 .index-tile:nth-child(4) {
+    background-color: #1F542F;
+}
+
+#index-intermediate-3 .index-tile:nth-child(5) {
+    background-color: #093315;
 }
 
 #sky-layout {
@@ -307,6 +374,20 @@
 
 #sky-layout.gap-enable {
     column-gap: 10px;
+}
+
+#my-logo {
+    width: 30px;
+}
+
+#my-signature {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#my-sign {
+    width: 5em;
 }
 
 #my-logo {
