@@ -118,6 +118,11 @@
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    #sky-bottom-block {
+        flex-direction: column;
+        gap: 0px !important;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -294,7 +299,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
 }
 
 .index-intermediate {
@@ -378,6 +382,7 @@
 
 #my-logo {
     width: 30px;
+    filter: invert(1);
 }
 
 #my-signature {
@@ -395,13 +400,31 @@
 }
 
 #my-signature {
-    width: 300px;
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sky-signature {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sky-flip-card {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 #my-sign {
-    width: 5em;
+    width: 7em;
+    filter: invert(1);
 }
 
 .sky-card {
@@ -417,10 +440,13 @@
 }
 
 #sky-bottom-block {
-    position: absolute;
-    bottom: 10px;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
 }
 
 .sky-card-title {
@@ -481,12 +507,15 @@
 }
 
 .sky-more {
-    background-color: transparent;
     border: none;
-    width: 0px;
+    width: 200px;
     height: 0px;
     padding: 0px;
-    transition: all cubic-bezier(0, 0.7, 0, 1) 0.3s;
+    transition: width cubic-bezier(0, 0.7, 0, 1) 0.3s,
+        height cubic-bezier(0, 0.7, 0, 1) 0.3s,
+        padding cubic-bezier(0, 0.7, 0, 1) 0.3s,
+        opacity ease-in-out 0.3s;
+    opacity: 0;
 }
 
 .sky-more ul {
@@ -495,7 +524,7 @@
     margin-top: 0;
     margin-bottom: 0;
     display: grid;
-    height: 198px;
+    height: 200px;
     grid-template-rows: repeat(4, 1fr);
 }
 
@@ -503,15 +532,14 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: white;
+    color: unset;
     font-size: 20px;
     border-radius: 6px;
     transition: all 0.2s;
 }
 
 .sky-more ul a:hover {
-    background-color: white;
-    color: black;
+    background-color: rgba(159, 159, 159, 0.3);
 }
 
 .sky-more ul li {
@@ -536,11 +564,11 @@
 }
 
 .sky-more.show {
-    background-color: transparent;
-    border: solid 1px white;
-    width: 298px;
-    height: 198px;
+    background-color: #f3f3f3;
+    width: 300px;
+    height: 200px;
     padding: 10px;
+    opacity: 1;
 }
 
 #list-of-contacts {
@@ -590,4 +618,28 @@
     #list-of-contacts li {
         border-bottom-color: #333;
     }
+
+    .sky-more.show {
+        background-color: #333;
+    }
+}
+
+.sky-note-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sky-note {
+    width: 80%;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #1E4C54;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: solid 1px hsl(189, 47%, 42%);
+    opacity: 0.6;
 }
