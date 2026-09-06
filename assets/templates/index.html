@@ -5,6 +5,10 @@
 <style>
     /* styling for home page readability concerns */
 
+    body {
+        margin: 0;
+    }
+
     #counter-buttons {
         opacity: 0;
         transition: all 0.2s;
@@ -21,10 +25,24 @@
     .content-unit {
         margin-top: 0;
         height: 100vh;
+        width: 100%;
+        margin-left: 0;
     }
 </style>
 
 <div class="content-unit">
+    <div class="sky-note-box">
+        <div class="sky-note">
+            <span class="material-symbols-outlined">block</span>
+            <span>
+                This website does not contain AI-generated content. <a
+                    href="https://blog.jerryly.cn/posts/20260904.html">Learn more.</a>
+            </span>
+            <span>
+                本网站不含 AI 生成内容。 <a href="https://blog.jerryly.cn/posts/20260904.html">了解更多。</a>
+            </span>
+        </div>
+    </div>
     <div id="index-tiles">
         <div class="index-intermediate" id="index-intermediate-1">
             <div class="index-tile"></div>
@@ -51,15 +69,7 @@
                     </span>
                 </div>
             </div>
-            <div class="index-tile sky-note-box">
-                <div class="sky-note">
-                    <span class="material-symbols-outlined">block</span>
-                    <span>
-                        This website does not contain AI-generated content. <a
-                            href="https://blog.jerryly.cn/posts/20260904.html">Learn more.</a>
-                    </span>
-                </div>
-            </div>
+            <div class="index-tile"></div>
             <div class="index-tile"></div>
         </div>
         <div class="index-intermediate" id="index-intermediate-3">

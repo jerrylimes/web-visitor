@@ -285,6 +285,15 @@
     .gallery-widescreen img {
         width: 272px;
     }
+
+    .sky-note-box {
+        width: 80% !important;
+        left: 10% !important;
+    }
+
+    .sky-note {
+        gap: 10px;
+    }
 }
 
 .work-date {
@@ -304,9 +313,6 @@
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .index-intermediate {
@@ -377,15 +383,24 @@
 }
 
 #sky-layout {
+    width: 0;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 0px;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    z-index: 1;
+    opacity: 0;
 }
 
 #sky-layout.gap-enable {
+    width: 300px;
     column-gap: 10px;
+    opacity: 1;
+    transition: width cubic-bezier(0, 0.7, 0, 1) 0.3s, opacity ease-in-out 0.3s;
 }
 
 #my-logo {
@@ -641,23 +656,25 @@
 }
 
 .sky-note-box {
+    width: 66%;
+    position: absolute;
+    top: 60px;
+    left: 17%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .sky-note {
-    width: 80%;
+    width: calc(100% - 20px);
     font-size: 14px;
     border-radius: 10px;
-    background-color: #1E4C54;
+    background-color: hsla(189, 52%, 55%, 0.5);
+    backdrop-filter: blur(12px);
     display: flex;
-    gap: 10px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border: solid 1px hsl(189, 47%, 42%);
-    opacity: 0.6;
 }
 
 .sky-note a {
