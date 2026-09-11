@@ -123,6 +123,11 @@
             </ul>
         </div>
     </div>
+    <div class="sky-note-button">
+        <div class="sky-note">
+            <span class="material-symbols-outlined">pause</span>
+        </div>
+    </div>
 </div>
 
 <div class="empty-box"></div>
@@ -131,6 +136,20 @@
     $("#sky-flip-card").click(() => {
         $("#sky-layout").toggleClass("gap-enable");
         $(".sky-more").toggleClass("show");
+    });
+    $(".sky-note-button").click(function () {
+        const icon = $(this).find(".material-symbols-outlined");
+        const isPaused = icon.text().trim() === "pause";
+
+        document.getAnimations().forEach((animation) => {
+            if (isPaused) {
+                animation.pause();
+            } else {
+                animation.play();
+            }
+        });
+
+        icon.text(isPaused ? "play_arrow" : "pause");
     });
 </script>
 

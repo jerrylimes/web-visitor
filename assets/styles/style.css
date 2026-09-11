@@ -322,64 +322,164 @@
     grid-template-columns: repeat(1, 1fr);
 }
 
+@keyframes changeColorFirstRow {
+    0% {
+        background-color: #CEE2EE;
+    }
+
+    50% {
+        background-color: #C6E7ED;
+    }
+
+    100% {
+        background-color: #C4EDD0;
+    }
+}
+
+@keyframes changeColorSecondRow {
+    0% {
+        background-color: #88A7BA;
+    }
+
+    50% {
+        background-color: #8DB3BA;
+    }
+
+    100% {
+        background-color: #8FBA9C;
+    }
+}
+
+@keyframes changeColorThirdRow {
+    0% {
+        background-color: #486F87;
+    }
+
+    50% {
+        background-color: #4C7E87;
+    }
+
+    100% {
+        background-color: #4D875E;
+    }
+}
+
+@keyframes changeColorFourthRow {
+    0% {
+        background-color: #1C3F54;
+    }
+
+    50% {
+        background-color: #1E4C54;
+    }
+
+    100% {
+        background-color: #1F542F;
+    }
+}
+
+@keyframes changeColorFifthRow {
+    0% {
+        background-color: #072233;
+    }
+
+    50% {
+        background-color: #082D33;
+    }
+
+    100% {
+        background-color: #093315;
+    }
+}
+
 #index-intermediate-1 .index-tile:nth-child(1) {
     background-color: #CEE2EE;
+    animation: changeColorFirstRow 10s alternate infinite;
+    animation-delay: 0.4s;
 }
 
 #index-intermediate-1 .index-tile:nth-child(2) {
     background-color: #88A7BA;
+    animation: changeColorSecondRow 10s alternate infinite;
+    animation-delay: 0.8s;
 }
 
 #index-intermediate-1 .index-tile:nth-child(3) {
     background-color: #486F87;
+    animation: changeColorThirdRow 10s alternate infinite;
+    animation-delay: 1.2s;
 }
 
 #index-intermediate-1 .index-tile:nth-child(4) {
     background-color: #1C3F54;
+    animation: changeColorFourthRow 10s alternate infinite;
+    animation-delay: 1.6s;
 }
 
 #index-intermediate-1 .index-tile:nth-child(5) {
     background-color: #072233;
+    animation: changeColorFifthRow 10s alternate infinite;
+    animation-delay: 2s;
 }
 
 #index-intermediate-2 .index-tile:nth-child(1) {
-    background-color: #C6E7ED;
+    background-color: #CEE2EE;
+    animation: changeColorFirstRow 10s alternate infinite;
+    animation-delay: 2.4s;
 }
 
 #index-intermediate-2 .index-tile:nth-child(2) {
-    background-color: #8DB3BA;
+    background-color: #88A7BA;
+    animation: changeColorSecondRow 10s alternate infinite;
+    animation-delay: 2.8s;
 }
 
 #index-intermediate-2 .index-tile:nth-child(3) {
-    background-color: #4C7E87;
+    background-color: #486F87;
+    animation: changeColorThirdRow 10s alternate infinite;
+    animation-delay: 3.2s;
 }
 
 #index-intermediate-2 .index-tile:nth-child(4) {
-    background-color: #1E4C54;
+    background-color: #1C3F54;
+    animation: changeColorFourthRow 10s alternate infinite;
+    animation-delay: 3.6s;
 }
 
 #index-intermediate-2 .index-tile:nth-child(5) {
-    background-color: #082D33;
+    background-color: #072233;
+    animation: changeColorFifthRow 10s alternate infinite;
+    animation-delay: 4s;
 }
 
 #index-intermediate-3 .index-tile:nth-child(1) {
-    background-color: #C4EDD0;
+    background-color: #CEE2EE;
+    animation: changeColorFirstRow 10s alternate infinite;
+    animation-delay: 4.4s;
 }
 
 #index-intermediate-3 .index-tile:nth-child(2) {
-    background-color: #8FBA9C;
+    background-color: #88A7BA;
+    animation: changeColorSecondRow 10s alternate infinite;
+    animation-delay: 4.8s;
 }
 
 #index-intermediate-3 .index-tile:nth-child(3) {
-    background-color: #4D875E;
+    background-color: #486F87;
+    animation: changeColorThirdRow 10s alternate infinite;
+    animation-delay: 5.2s;
 }
 
 #index-intermediate-3 .index-tile:nth-child(4) {
-    background-color: #1F542F;
+    background-color: #1C3F54;
+    animation: changeColorFourthRow 10s alternate infinite;
+    animation-delay: 5.6s;
 }
 
 #index-intermediate-3 .index-tile:nth-child(5) {
-    background-color: #093315;
+    background-color: #072233;
+    animation: changeColorFifthRow 10s alternate infinite;
+    animation-delay: 6s;
 }
 
 #sky-layout {
@@ -655,7 +755,8 @@
     }
 }
 
-.sky-note-box {
+.sky-note-box,
+.sky-note-button {
     width: 66%;
     position: absolute;
     top: 60px;
@@ -663,6 +764,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.sky-note-button {
+    top: unset;
+    bottom: 60px;
+    width: unset;
+    left: calc(50% - 22px);
 }
 
 .sky-note {
@@ -675,6 +783,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+
+.sky-note-button .sky-note {
+    background-color: transparent;
+    backdrop-filter: unset;
+    opacity: 0.4;
 }
 
 .sky-note a {
